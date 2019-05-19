@@ -40,7 +40,7 @@
         Try
 
 
-            service.DeleteVolunteer(Convert.ToInt32(DataGridView1.SelectedCells.Item("ID").Value))
+            service.DeleteVolunteer(Convert.ToInt32(DataGridView1.SelectedCells.Item(0).Value))
         Catch ex As Exception
             service.DeleteVolunteer(DataGridView1.Rows.Count - 1)
 
