@@ -86,6 +86,12 @@
     <Compile Include="Form_Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_EditVolunteer.Designer.vb">
+      <DependentUpon>Form_EditVolunteer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EditVolunteer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Models\Degree.vb" />
     <Compile Include="Models\Media.vb" />
     <Compile Include="Models\Skills.vb" />

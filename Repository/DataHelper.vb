@@ -32,7 +32,6 @@ Public Class DataHelper
         Using conn As SqlConnection = New SqlConnection(My.Settings.connString)
 
             Dim cmd As SqlCommand = New SqlCommand(query, conn)
-            cmd.Parameters.AddRange(paramters)
 
             conn.Open()
             Return cmd.ExecuteNonQuery()

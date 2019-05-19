@@ -21,8 +21,9 @@
 
     End Function
 
-    Public Function DeleteVolunteer()
+    Public Function DeleteVolunteer(ByVal id As Integer)
 
+        repo.DeleteVolunteer(id)
     End Function
 
     Public Function GetVolunteer(ByVal id As Integer) As Volunteer

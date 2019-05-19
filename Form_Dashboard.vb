@@ -29,9 +29,26 @@
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
+
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub deleteButton_Click(sender As Object, e As EventArgs) Handles deleteButton.Click
+        Try
+
+
+            service.DeleteVolunteer(Convert.ToInt32(DataGridView1.SelectedCells.Item("ID").Value))
+        Catch ex As Exception
+            service.DeleteVolunteer(DataGridView1.Rows.Count - 1)
+
+
+        End Try
+
+        DataGridView1.DataSource = service.GetVolunteersGrid()
+
 
     End Sub
 End Class

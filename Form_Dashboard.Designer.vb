@@ -35,11 +35,11 @@ Partial Class Main_Form
         Me.search_image = New System.Windows.Forms.Label()
         Me.Main_Panel = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TEST_DATA_BASEDataSet = New desktop_app_mark_1.TEST_DATA_BASEDataSet()
-        Me.TESTDATABASEDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Title = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TEST_DATA_BASEDataSet = New desktop_app_mark_1.TEST_DATA_BASEDataSet()
+        Me.TESTDATABASEDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel_Header.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -185,16 +185,6 @@ Partial Class Main_Form
         Me.DataGridView1.Size = New System.Drawing.Size(808, 306)
         Me.DataGridView1.TabIndex = 0
         '
-        'TEST_DATA_BASEDataSet
-        '
-        Me.TEST_DATA_BASEDataSet.DataSetName = "TEST_DATA_BASEDataSet"
-        Me.TEST_DATA_BASEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TESTDATABASEDataSetBindingSource
-        '
-        Me.TESTDATABASEDataSetBindingSource.DataSource = Me.TEST_DATA_BASEDataSet
-        Me.TESTDATABASEDataSetBindingSource.Position = 0
-        '
         'ID
         '
         Me.ID.DataPropertyName = "ID"
@@ -218,6 +208,16 @@ Partial Class Main_Form
         Me.Name.Name = "Name"
         Me.Name.Width = 800
         '
+        'TEST_DATA_BASEDataSet
+        '
+        Me.TEST_DATA_BASEDataSet.DataSetName = "TEST_DATA_BASEDataSet"
+        Me.TEST_DATA_BASEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TESTDATABASEDataSetBindingSource
+        '
+        Me.TESTDATABASEDataSetBindingSource.DataSource = Me.TEST_DATA_BASEDataSet
+        Me.TESTDATABASEDataSetBindingSource.Position = 0
+        '
         'Main_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -225,7 +225,7 @@ Partial Class Main_Form
         Me.ClientSize = New System.Drawing.Size(840, 424)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        '' Me.Name = "Main_Form"
+        ''Me.Name = "Main_Form"
         Me.Text = "Dashboard"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel_Header.ResumeLayout(False)

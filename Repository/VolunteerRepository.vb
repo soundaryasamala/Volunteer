@@ -34,7 +34,10 @@
 
     End Function
 
-    Public Function DeleteVolunteer()
+    Public Function DeleteVolunteer(ByVal ID As Integer)
+
+        Dim query As String = $"Delete from volunteer where id = {ID} "
+        dataHelper.ExecuteNonQuery(query, Nothing).Tables(0)
 
     End Function
 
