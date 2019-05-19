@@ -494,8 +494,8 @@ Partial Class Form_EditVolunteer
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Name = "Add_Volunteer"
-        Me.Text = "Add Volunteer"
+        Me.Name = "Edit_Volunteer"
+        Me.Text = "Edit Volunteer"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

@@ -16,8 +16,9 @@
 
     End Function
 
-    Public Function AddVolunteer()
+    Public Function AddVolunteer(ByVal vol As Volunteer)
 
+        repo.AddVolunteer(vol)
 
     End Function
 

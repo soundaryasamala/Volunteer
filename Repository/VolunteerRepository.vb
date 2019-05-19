@@ -30,14 +30,19 @@
         Return dt
     End Function
 
-    Public Function AddVolunteer()
+    Public Function AddVolunteer(ByVal vol As Volunteer)
+
+        Dim query As String = $"INSERT INTO VOLUNTEER 
+	 VALUES ('{vol.Title }','{vol.Name }','{vol.Address }',{1},'{vol.HomePhoneNo }','{vol.MobileNo}'
+	,'{vol.SSN }','{vol.Dob }',{Convert.ToInt32(vol.VolunteerStatus) },'{vol.DischargeDate }','','')"
+        dataHelper.ExecuteNonQuery(query, Nothing)
 
     End Function
 
     Public Function DeleteVolunteer(ByVal ID As Integer)
 
         Dim query As String = $"Delete from volunteer where id = {ID} "
-        dataHelper.ExecuteNonQuery(query, Nothing).Tables(0)
+        dataHelper.ExecuteNonQuery(query, Nothing)
 
     End Function
 
