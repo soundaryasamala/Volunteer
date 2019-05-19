@@ -54,26 +54,24 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=TEST_DATA_BASE;Persist "& _ 
-            "Security Info=False;User ID=kalyan@dbba;Password=Aa1111111111;MultipleActiveResu"& _ 
-            "ltSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")>  _
-        Public Property Setting() As String
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=demodb;Persist Security"& _ 
+            " Info=False;User ID=kalyan@dbba;Password=Aa1111111111;MultipleActiveResultSets=F"& _ 
+            "alse;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")>  _
+        Public ReadOnly Property connString() As String
             Get
-                Return CType(Me("Setting"),String)
+                Return CType(Me("connString"),String)
             End Get
-            Set
-                Me("Setting") = value
-            End Set
         End Property
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=TEST_DATA_BASE;Persist "& _ 
-            "Security Info=False;User ID=kalyan@dbba;Password=Aa1111111111;MultipleActiveResu"& _ 
-            "ltSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=demodb;Persist Security"& _ 
+            " Info=False;User ID=kalyan@dbba;Password=Aa1111111111;MultipleActiveResultSets=F"& _ 
+            "alse;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")>  _
         Public ReadOnly Property test_data_base() As String
             Get
                 Return CType(Me("test_data_base"),String)
@@ -82,16 +80,15 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=TEST_DATA_BASE;Persist "& _ 
-            "Security Info=False;User ID=kalyan@dbba;Password=Aa1111111111;MultipleActiveResu"& _ 
-            "ltSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")>  _
-        Public Property connString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=demodb;Persist Security"& _ 
+            " Info=False;User ID=kalyan@dbba;Password=Aa1111111111;MultipleActiveResultSets=F"& _ 
+            "alse;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")>  _
+        Public Property Setting() As String
             Get
-                Return CType(Me("connString"),String)
+                Return CType(Me("Setting"),String)
             End Get
             Set
-                Me("connString") = value
+                Me("Setting") = value
             End Set
         End Property
     End Class
