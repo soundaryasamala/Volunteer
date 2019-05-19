@@ -21,6 +21,10 @@
 
     Private Sub Search_text_TextChanged(sender As Object, e As EventArgs) Handles search_text.TextChanged
 
+        Dim bs As BindingSource = New BindingSource()
+        bs.DataSource = DataGridView1.DataSource
+        bs.Filter = "Name like '%" + search_text.Text + "%'"
+        DataGridView1.DataSource = bs
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
