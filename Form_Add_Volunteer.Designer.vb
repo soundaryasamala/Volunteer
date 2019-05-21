@@ -68,6 +68,7 @@ Partial Class Add_Volunteer
         Me.Name_Text = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,6 +96,7 @@ Partial Class Add_Volunteer
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.TextBox9)
         Me.Panel2.Controls.Add(Me.Notes)
         Me.Panel2.Controls.Add(Me.TextBox8)
@@ -175,7 +177,7 @@ Partial Class Add_Volunteer
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(640, 351)
+        Me.Button1.Location = New System.Drawing.Point(620, 351)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 39
@@ -489,6 +491,15 @@ Partial Class Add_Volunteer
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(710, 351)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 44
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Add_Volunteer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -554,4 +565,5 @@ Partial Class Add_Volunteer
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Notes As Label
+    Friend WithEvents Button2 As Button
 End Class

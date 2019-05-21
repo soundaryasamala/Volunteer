@@ -37,18 +37,37 @@
     End Sub
 
     Private Sub deleteButton_Click(sender As Object, e As EventArgs) Handles deleteButton.Click
-        Try
 
-
-            service.DeleteVolunteer(Convert.ToInt32(DataGridView1.SelectedCells.Item(0).Value))
-        Catch ex As Exception
-            service.DeleteVolunteer(DataGridView1.Rows.Count - 1)
-
-
-        End Try
-
+        Dim isSelected As Boolean
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            isSelected = Convert.ToBoolean(row.Cells("CheckBox").Value)
+            If isSelected Then
+                service.DeleteVolunteer(Convert.ToInt32(row.Cells("ID").Value))
+            End If
+        Next
+        If isSelected = False Then
+            MsgBox("No Volunteers are Selected")
+        End If
         DataGridView1.DataSource = service.GetVolunteersGrid()
 
+
+    End Sub
+
+
+    Private Sub Edit_Click(sender As Object, e As EventArgs) Handles Edit.Click
+        Dim isSelected As Boolean
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            isSelected = Convert.ToBoolean(row.Cells("CheckBox").Value)
+            If isSelected Then
+                Dim obj1 As Form_EditVolunteer = New Form_EditVolunteer(Convert.ToInt32(row.Cells("ID").Value))
+                obj1.Show()
+                Me.Hide()
+                Exit For
+            End If
+        Next
+        If isSelected = False Then
+            MsgBox("No Volunteers are Selected")
+        End If
 
     End Sub
 End Class

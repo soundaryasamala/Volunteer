@@ -117,48 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="addButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAEhJREFUOE9j
-        GMHg////BiAM5ZIPgIYcAGEol3wwTAwCagAFLFgjEv4AxejiuCMAJImmGIRJNwgbgGmEcskHw9sg6mSR
-        oQoYGAC1oKC9V8xSpQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="deleteButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAHRJREFUOE/t
-        ksEJwCAQBP3ahf/8UoGlWIBF2E6aCOnssoebVzz1GSEDA8KNiqBbBxHZ4QkvquuN4z4II5wlctsbDAMs
-        kwZua4Mgwec5lom5DSK9bURhbqNRbbv8B41Z9KBc2y6ZuQ0iDw/Y+tGqzjzzz+LcDQ0UEr69A+X7AAAA
-        AElFTkSuQmCC
-</value>
-  </data>
-  <data name="search_image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAOhJREFUOE/V
-        0qFrQkEAx/GnsDBRkSUHdovNbhMM4h8hgm110b9B7WNgsAgGkwsWm0FEq82wNHGzCCL6/d29wYaP5xMN
-        +oUP3p3cPbmncxdFUcEAbVQRx1mlscQeP5hhi0/kEahHzKFNZUSgkhhig4wWTvUC/ZKSmf0vBj2ga2Yn
-        6mBlh5618GWH/vUxtUPP6vi2Q/+a2OHZzI6b4MMO/ctCd6SLTWjhT/oL6LucmQWoBm3Qxb6hgbG7toBe
-        SAiBKuJ38xojFPDqrukBgQ/z6gE9XOWwMN5xlcOU3rDuMWVmF/bkft5kjnMAs5UwGpExE5AAAAAASUVO
-        RK5CYII=
-</value>
-  </data>
-  <metadata name="CheckBox.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Title.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TEST_DATA_BASEDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="TESTDATABASEDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>206, 17</value>
   </metadata>
 </root>

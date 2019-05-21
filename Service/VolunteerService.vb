@@ -1,4 +1,6 @@
-﻿Public Class VolunteerService
+﻿Imports desktop_app_mark_1
+
+Public Class VolunteerService
 
     Private repo As VolunteerRepository
     Public Sub New()
@@ -33,5 +35,9 @@
 
     End Function
 
+    Public Function EditVolunteer(volunteer_Id As Integer, vol As Volunteer)
 
+        repo.EditVolunteer(volunteer_Id, vol)
+
+    End Function
 End Class

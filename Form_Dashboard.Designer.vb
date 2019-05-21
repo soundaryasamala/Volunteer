@@ -28,6 +28,7 @@ Partial Class Main_Form
         Me.Panel_Header = New System.Windows.Forms.Panel()
         Me.LB_Header = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Edit = New System.Windows.Forms.Button()
         Me.addButton = New System.Windows.Forms.Button()
         Me.deleteButton = New System.Windows.Forms.Button()
         Me.searchButton = New System.Windows.Forms.Button()
@@ -35,6 +36,7 @@ Partial Class Main_Form
         Me.search_image = New System.Windows.Forms.Label()
         Me.Main_Panel = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Title = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -87,6 +89,7 @@ Partial Class Main_Form
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel1.Controls.Add(Me.Edit)
         Me.Panel1.Controls.Add(Me.addButton)
         Me.Panel1.Controls.Add(Me.deleteButton)
         Me.Panel1.Controls.Add(Me.searchButton)
@@ -98,6 +101,18 @@ Partial Class Main_Form
         Me.Panel1.Size = New System.Drawing.Size(806, 45)
         Me.Panel1.TabIndex = 1
         '
+        'Edit
+        '
+        Me.Edit.AutoSize = True
+        Me.Edit.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Edit.Location = New System.Drawing.Point(625, 10)
+        Me.Edit.Name = "Edit"
+        Me.Edit.Size = New System.Drawing.Size(75, 28)
+        Me.Edit.TabIndex = 8
+        Me.Edit.Text = "Edit"
+        Me.Edit.UseVisualStyleBackColor = False
+        '
         'addButton
         '
         Me.addButton.AutoSize = True
@@ -107,7 +122,7 @@ Partial Class Main_Form
         Me.addButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addButton.Image = CType(resources.GetObject("addButton.Image"), System.Drawing.Image)
         Me.addButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.addButton.Location = New System.Drawing.Point(541, 10)
+        Me.addButton.Location = New System.Drawing.Point(496, 10)
         Me.addButton.Name = "addButton"
         Me.addButton.Size = New System.Drawing.Size(123, 28)
         Me.addButton.TabIndex = 7
@@ -125,11 +140,11 @@ Partial Class Main_Form
         Me.deleteButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.deleteButton.Image = CType(resources.GetObject("deleteButton.Image"), System.Drawing.Image)
         Me.deleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.deleteButton.Location = New System.Drawing.Point(665, 10)
+        Me.deleteButton.Location = New System.Drawing.Point(706, 10)
         Me.deleteButton.Name = "deleteButton"
-        Me.deleteButton.Size = New System.Drawing.Size(137, 28)
+        Me.deleteButton.Size = New System.Drawing.Size(87, 28)
         Me.deleteButton.TabIndex = 6
-        Me.deleteButton.Text = "Delete Selection"
+        Me.deleteButton.Text = "Delete "
         Me.deleteButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.deleteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.deleteButton.UseVisualStyleBackColor = False
@@ -178,19 +193,29 @@ Partial Class Main_Form
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Title, Me.Name})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CheckBox, Me.ID, Me.Title, Me.Name})
         Me.DataGridView1.Location = New System.Drawing.Point(-2, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(808, 306)
         Me.DataGridView1.TabIndex = 0
+        '
+        'CheckBox
+        '
+        Me.CheckBox.HeaderText = ""
+        Me.CheckBox.Name = "CheckBox"
         '
         'ID
         '
         Me.ID.DataPropertyName = "ID"
         Me.ID.HeaderText = "ID"
         Me.ID.Name = "ID"
-        Me.ID.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ID.ReadOnly = True
+        Me.ID.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'Title
@@ -198,7 +223,8 @@ Partial Class Main_Form
         Me.Title.DataPropertyName = "Title"
         Me.Title.HeaderText = "Title"
         Me.Title.Name = "Title"
-        Me.Title.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Title.ReadOnly = True
+        Me.Title.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Title.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'Name
@@ -206,6 +232,8 @@ Partial Class Main_Form
         Me.Name.DataPropertyName = "Name"
         Me.Name.HeaderText = "Name"
         Me.Name.Name = "Name"
+        Me.Name.ReadOnly = True
+        Me.Name.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Name.Width = 800
         '
         'TEST_DATA_BASEDataSet
@@ -225,7 +253,6 @@ Partial Class Main_Form
         Me.ClientSize = New System.Drawing.Size(840, 424)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        ''Me.Name = "Main_Form"
         Me.Text = "Dashboard"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel_Header.ResumeLayout(False)
@@ -252,6 +279,8 @@ Partial Class Main_Form
     Friend WithEvents TESTDATABASEDataSetBindingSource As BindingSource
     Friend WithEvents TEST_DATA_BASEDataSet As TEST_DATA_BASEDataSet
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Edit As Button
+    Friend WithEvents CheckBox As DataGridViewCheckBoxColumn
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Title As DataGridViewTextBoxColumn
     Friend WithEvents Name As DataGridViewTextBoxColumn
