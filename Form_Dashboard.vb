@@ -1,4 +1,4 @@
-﻿Public Class Main_Form
+﻿Public Class Volunteer_Form
 
     Private service As VolunteerService
     Public Sub New()

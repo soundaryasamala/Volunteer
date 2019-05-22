@@ -22,7 +22,7 @@
         vol.HomePhoneNo = HomeNo.Text
         service.AddVolunteer(vol)
 
-        Dim obj1 As Main_Form = New Main_Form()
+        Dim obj1 As Volunteer_Form = New Volunteer_Form()
         obj1.Show()
         Me.Hide()
 

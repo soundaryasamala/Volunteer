@@ -74,6 +74,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_EditEvent.Designer.vb">
+      <DependentUpon>Form_EditEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EditEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddEvent.Designer.vb">
+      <DependentUpon>Form_AddEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AddEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Events.Designer.vb">
+      <DependentUpon>Form_Events.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Events.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Add_Volunteer.Designer.vb">
       <DependentUpon>Form_Add_Volunteer.vb</DependentUpon>
     </Compile>
@@ -90,6 +108,12 @@
       <DependentUpon>Form_EditVolunteer.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_EditVolunteer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\Degree.vb" />
@@ -114,8 +138,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Repository\DataHelper.vb" />
+    <Compile Include="CommonData\DataHelper.vb" />
+    <Compile Include="Repository\EventRepository.vb" />
+    <Compile Include="Repository\LoginRepository.vb" />
     <Compile Include="Repository\VolunteerRepository.vb" />
+    <Compile Include="Service\LoginService.vb" />
     <Compile Include="Service\VolunteerService.vb" />
     <Compile Include="Settings.vb" />
     <Compile Include="TEST_DATA_BASEDataSet.Designer.vb">
@@ -125,6 +152,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form_EditEvent.resx">
+      <DependentUpon>Form_EditEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AddEvent.resx">
+      <DependentUpon>Form_AddEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Events.resx">
+      <DependentUpon>Form_Events.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Add_Volunteer.resx">
       <DependentUpon>Form_Add_Volunteer.vb</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_EditVolunteer.resx">
       <DependentUpon>Form_EditVolunteer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
