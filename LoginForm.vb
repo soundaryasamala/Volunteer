@@ -3,11 +3,13 @@
     Private service As LoginService
     Public Sub New()
         service = New LoginService()
+        InitializeComponent()
+
     End Sub
 
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 
-        Dim Id As Boolean = service.ValidateLogin(UserId.Text, Password.Text ])
+        Dim Id As Boolean = service.ValidateLogin(UserId.Text, Password.Text)
 
         If (Id <> 0) Then
 

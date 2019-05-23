@@ -30,7 +30,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim obj1 As Main_Form = New Main_Form()
+        Dim obj1 As Volunteer_Form = New Volunteer_Form()
         obj1.Show()
         Me.Hide()
     End Sub

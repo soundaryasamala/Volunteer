@@ -33,9 +33,9 @@ Partial Class Form_Events
         Me.Volunteers = New System.Windows.Forms.Button()
         Me.Delete = New System.Windows.Forms.Button()
         Me.Edit = New System.Windows.Forms.Button()
-        Me.Add = New System.Windows.Forms.Button()
+        Me.AddButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.search = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -105,9 +105,9 @@ Partial Class Form_Events
         Me.Panel2.Controls.Add(Me.Volunteers)
         Me.Panel2.Controls.Add(Me.Delete)
         Me.Panel2.Controls.Add(Me.Edit)
-        Me.Panel2.Controls.Add(Me.Add)
+        Me.Panel2.Controls.Add(Me.AddButton)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.search)
         Me.Panel2.Location = New System.Drawing.Point(0, 64)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(800, 56)
@@ -143,15 +143,15 @@ Partial Class Form_Events
         Me.Edit.Text = "Edit"
         Me.Edit.UseVisualStyleBackColor = False
         '
-        'Add
+        'AddButton
         '
-        Me.Add.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Add.Location = New System.Drawing.Point(470, 20)
-        Me.Add.Name = "Add"
-        Me.Add.Size = New System.Drawing.Size(75, 23)
-        Me.Add.TabIndex = 2
-        Me.Add.Text = "Add "
-        Me.Add.UseVisualStyleBackColor = False
+        Me.AddButton.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.AddButton.Location = New System.Drawing.Point(470, 20)
+        Me.AddButton.Name = "AddButton"
+        Me.AddButton.Size = New System.Drawing.Size(75, 23)
+        Me.AddButton.TabIndex = 2
+        Me.AddButton.Text = "Add "
+        Me.AddButton.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -164,12 +164,12 @@ Partial Class Form_Events
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'search
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 19)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(265, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.search.Location = New System.Drawing.Point(12, 19)
+        Me.search.Name = "search"
+        Me.search.Size = New System.Drawing.Size(265, 20)
+        Me.search.TabIndex = 0
         '
         'Form_Events
         '
@@ -199,9 +199,9 @@ Partial Class Form_Events
     Friend WithEvents EventDescription As DataGridViewCheckBoxColumn
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents search As TextBox
     Friend WithEvents Volunteers As Button
     Friend WithEvents Delete As Button
     Friend WithEvents Edit As Button
-    Friend WithEvents Add As Button
+    Friend WithEvents AddButton As Button
 End Class

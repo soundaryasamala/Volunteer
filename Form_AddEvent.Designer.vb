@@ -27,7 +27,7 @@ Partial Class Form_AddEvent
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Notes = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.index = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,11 +37,11 @@ Partial Class Form_AddEvent
         Me.ShiftEnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Expenses = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Reimbursements = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.EventDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Type = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.EventName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -64,22 +64,22 @@ Partial Class Form_AddEvent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(306, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(206, 37)
+        Me.Label1.Size = New System.Drawing.Size(202, 37)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "EDIT EVENT"
+        Me.Label1.Text = "ADD EVENT"
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.TextBox3)
+        Me.Panel2.Controls.Add(Me.Notes)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.DataGridView1)
-        Me.Panel2.Controls.Add(Me.DateTimePicker1)
+        Me.Panel2.Controls.Add(Me.EventDate)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.Type)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.EventName)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(-2, 49)
         Me.Panel2.Name = "Panel2"
@@ -106,12 +106,12 @@ Partial Class Form_AddEvent
         Me.Button1.Text = "Save"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox3
+        'Notes
         '
-        Me.TextBox3.Location = New System.Drawing.Point(137, 139)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(315, 20)
-        Me.TextBox3.TabIndex = 8
+        Me.Notes.Location = New System.Drawing.Point(137, 139)
+        Me.Notes.Name = "Notes"
+        Me.Notes.Size = New System.Drawing.Size(315, 20)
+        Me.Notes.TabIndex = 8
         '
         'Label5
         '
@@ -166,12 +166,12 @@ Partial Class Form_AddEvent
         Me.Reimbursements.HeaderText = "Reimbursements"
         Me.Reimbursements.Name = "Reimbursements"
         '
-        'DateTimePicker1
+        'EventDate
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(137, 102)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 5
+        Me.EventDate.Location = New System.Drawing.Point(137, 102)
+        Me.EventDate.Name = "EventDate"
+        Me.EventDate.Size = New System.Drawing.Size(200, 20)
+        Me.EventDate.TabIndex = 5
         '
         'Label4
         '
@@ -182,12 +182,12 @@ Partial Class Form_AddEvent
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Date    :"
         '
-        'TextBox2
+        'Type
         '
-        Me.TextBox2.Location = New System.Drawing.Point(137, 64)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(133, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.Type.Location = New System.Drawing.Point(137, 64)
+        Me.Type.Name = "Type"
+        Me.Type.Size = New System.Drawing.Size(133, 20)
+        Me.Type.TabIndex = 3
         '
         'Label3
         '
@@ -198,12 +198,12 @@ Partial Class Form_AddEvent
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Type    :"
         '
-        'TextBox1
+        'EventName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(137, 31)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.EventName.Location = New System.Drawing.Point(137, 31)
+        Me.EventName.Name = "EventName"
+        Me.EventName.Size = New System.Drawing.Size(100, 20)
+        Me.EventName.TabIndex = 1
         '
         'Label2
         '
@@ -238,7 +238,7 @@ Partial Class Form_AddEvent
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Notes As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents index As DataGridViewTextBoxColumn
@@ -248,9 +248,9 @@ Partial Class Form_AddEvent
     Friend WithEvents ShiftEnd As DataGridViewTextBoxColumn
     Friend WithEvents Expenses As DataGridViewTextBoxColumn
     Friend WithEvents Reimbursements As DataGridViewTextBoxColumn
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents EventDate As DateTimePicker
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Type As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents EventName As TextBox
 End Class

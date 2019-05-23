@@ -27,14 +27,6 @@
         DataGridView1.DataSource = bs
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-
-    End Sub
-
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub deleteButton_Click(sender As Object, e As EventArgs) Handles deleteButton.Click
 

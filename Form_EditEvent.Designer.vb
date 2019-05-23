@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddEvent
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class EditEvent
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,15 @@ Partial Class AddEvent
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Notes = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.index = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.volunteer = New System.Windows.Forms.DataGridViewComboBoxColumn()
@@ -39,10 +37,12 @@ Partial Class AddEvent
         Me.ShiftEnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Expenses = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Reimbursements = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.EventDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.EventType = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.EventName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,75 +64,63 @@ Partial Class AddEvent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(306, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(202, 37)
+        Me.Label1.Size = New System.Drawing.Size(206, 37)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ADD EVENT"
+        Me.Label1.Text = "EDIT EVENT"
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.TextBox3)
+        Me.Panel2.Controls.Add(Me.Notes)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.DataGridView1)
-        Me.Panel2.Controls.Add(Me.DateTimePicker1)
+        Me.Panel2.Controls.Add(Me.EventDate)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.EventType)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.EventName)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(-2, 49)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(802, 404)
         Me.Panel2.TabIndex = 1
         '
-        'Label2
+        'Button2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(44, 34)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Name  :"
+        Me.Button2.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Button2.Location = New System.Drawing.Point(601, 342)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(103, 32)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'Button1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(137, 31)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.Button1.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Button1.Location = New System.Drawing.Point(483, 342)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(99, 32)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Save"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'Label3
+        'Notes
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(44, 71)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Type    :"
+        Me.Notes.Location = New System.Drawing.Point(137, 139)
+        Me.Notes.Name = "Notes"
+        Me.Notes.Size = New System.Drawing.Size(315, 20)
+        Me.Notes.TabIndex = 8
         '
-        'TextBox2
+        'Label5
         '
-        Me.TextBox2.Location = New System.Drawing.Point(137, 64)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(133, 20)
-        Me.TextBox2.TabIndex = 3
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(44, 108)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Date    :"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(137, 102)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 5
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(44, 139)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(44, 13)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Notes  :"
         '
         'DataGridView1
         '
@@ -178,50 +166,62 @@ Partial Class AddEvent
         Me.Reimbursements.HeaderText = "Reimbursements"
         Me.Reimbursements.Name = "Reimbursements"
         '
-        'Label5
+        'EventDate
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(44, 139)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 13)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Notes  :"
+        Me.EventDate.Location = New System.Drawing.Point(137, 102)
+        Me.EventDate.Name = "EventDate"
+        Me.EventDate.Size = New System.Drawing.Size(200, 20)
+        Me.EventDate.TabIndex = 5
         '
-        'TextBox3
+        'Label4
         '
-        Me.TextBox3.Location = New System.Drawing.Point(137, 139)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(315, 20)
-        Me.TextBox3.TabIndex = 8
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(44, 108)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Date    :"
         '
-        'Button1
+        'EventType
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Button1.Location = New System.Drawing.Point(483, 342)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(99, 32)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.EventType.Location = New System.Drawing.Point(137, 64)
+        Me.EventType.Name = "EventType"
+        Me.EventType.Size = New System.Drawing.Size(133, 20)
+        Me.EventType.TabIndex = 3
         '
-        'Button2
+        'Label3
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Button2.Location = New System.Drawing.Point(601, 342)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 32)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(44, 71)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Type    :"
         '
-        'AddEvent
+        'EventName
+        '
+        Me.EventName.Location = New System.Drawing.Point(137, 31)
+        Me.EventName.Name = "EventName"
+        Me.EventName.Size = New System.Drawing.Size(100, 20)
+        Me.EventName.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(44, 34)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Name  :"
+        '
+        'EditEvent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "AddEvent"
+        Me.Name = "EditEvent"
         Me.Text = "AddEvent"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -238,7 +238,7 @@ Partial Class AddEvent
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Notes As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents index As DataGridViewTextBoxColumn
@@ -248,9 +248,9 @@ Partial Class AddEvent
     Friend WithEvents ShiftEnd As DataGridViewTextBoxColumn
     Friend WithEvents Expenses As DataGridViewTextBoxColumn
     Friend WithEvents Reimbursements As DataGridViewTextBoxColumn
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents EventDate As DateTimePicker
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents EventType As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents EventName As TextBox
 End Class
