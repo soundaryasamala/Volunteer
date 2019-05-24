@@ -122,6 +122,7 @@
     <Compile Include="Models\Skills.vb" />
     <Compile Include="Models\VeteranStatus.vb" />
     <Compile Include="Models\Volunteer.vb" />
+    <Compile Include="Models\VolunteerDetails.vb" />
     <Compile Include="Models\VolunteerEducation.vb" />
     <Compile Include="Models\WorkStatus.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

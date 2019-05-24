@@ -5,7 +5,7 @@
     End Sub
 
 
-    Public Function GetEvents(ByVal User As Integer) As List(Of Events)
+    Public Function GetEvents(ByVal User As Integer) As DataTable
         Return repo.GetEvents(User)
     End Function
 
