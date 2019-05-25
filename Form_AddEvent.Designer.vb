@@ -30,6 +30,12 @@ Partial Class Form_AddEvent
         Me.Notes = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.EventDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Type = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.EventName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.index = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.volunteer = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.Hours = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,12 +43,6 @@ Partial Class Form_AddEvent
         Me.ShiftEnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Expenses = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Reimbursements = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EventDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Type = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.EventName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,41 +131,6 @@ Partial Class Form_AddEvent
         Me.DataGridView1.Size = New System.Drawing.Size(742, 150)
         Me.DataGridView1.TabIndex = 6
         '
-        'index
-        '
-        Me.index.HeaderText = "No."
-        Me.index.Name = "index"
-        '
-        'volunteer
-        '
-        Me.volunteer.HeaderText = "Volunteer"
-        Me.volunteer.Name = "volunteer"
-        '
-        'Hours
-        '
-        Me.Hours.HeaderText = "Hours"
-        Me.Hours.Name = "Hours"
-        '
-        'ShiftStart
-        '
-        Me.ShiftStart.HeaderText = "Shift Start time"
-        Me.ShiftStart.Name = "ShiftStart"
-        '
-        'ShiftEnd
-        '
-        Me.ShiftEnd.HeaderText = "Shift End Time"
-        Me.ShiftEnd.Name = "ShiftEnd"
-        '
-        'Expenses
-        '
-        Me.Expenses.HeaderText = "Expenses"
-        Me.Expenses.Name = "Expenses"
-        '
-        'Reimbursements
-        '
-        Me.Reimbursements.HeaderText = "Reimbursements"
-        Me.Reimbursements.Name = "Reimbursements"
-        '
         'EventDate
         '
         Me.EventDate.Location = New System.Drawing.Point(137, 102)
@@ -214,6 +179,47 @@ Partial Class Form_AddEvent
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Name  :"
         '
+        'index
+        '
+        Me.index.HeaderText = "No."
+        Me.index.Name = "index"
+        '
+        'volunteer
+        '
+        Me.volunteer.DataPropertyName = "Volunteer"
+        Me.volunteer.HeaderText = "Volunteer"
+        Me.volunteer.Name = "volunteer"
+        '
+        'Hours
+        '
+        Me.Hours.DataPropertyName = "Hours"
+        Me.Hours.HeaderText = "Hours"
+        Me.Hours.Name = "Hours"
+        '
+        'ShiftStart
+        '
+        Me.ShiftStart.DataPropertyName = "ShiftStart"
+        Me.ShiftStart.HeaderText = "Shift Start time"
+        Me.ShiftStart.Name = "ShiftStart"
+        '
+        'ShiftEnd
+        '
+        Me.ShiftEnd.DataPropertyName = "ShiftEnd"
+        Me.ShiftEnd.HeaderText = "Shift End Time"
+        Me.ShiftEnd.Name = "ShiftEnd"
+        '
+        'Expenses
+        '
+        Me.Expenses.DataPropertyName = "Expenses"
+        Me.Expenses.HeaderText = "Expenses"
+        Me.Expenses.Name = "Expenses"
+        '
+        'Reimbursements
+        '
+        Me.Reimbursements.DataPropertyName = "Reimbursements"
+        Me.Reimbursements.HeaderText = "Reimbursements"
+        Me.Reimbursements.Name = "Reimbursements"
+        '
         'Form_AddEvent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -241,6 +247,11 @@ Partial Class Form_AddEvent
     Friend WithEvents Notes As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents EventDate As DateTimePicker
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Type As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents EventName As TextBox
     Friend WithEvents index As DataGridViewTextBoxColumn
     Friend WithEvents volunteer As DataGridViewComboBoxColumn
     Friend WithEvents Hours As DataGridViewTextBoxColumn
@@ -248,9 +259,4 @@ Partial Class Form_AddEvent
     Friend WithEvents ShiftEnd As DataGridViewTextBoxColumn
     Friend WithEvents Expenses As DataGridViewTextBoxColumn
     Friend WithEvents Reimbursements As DataGridViewTextBoxColumn
-    Friend WithEvents EventDate As DateTimePicker
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Type As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents EventName As TextBox
 End Class

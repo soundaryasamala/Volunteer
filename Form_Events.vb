@@ -3,7 +3,7 @@
     Dim userId As Integer
     Dim service As EventService
 
-    Public Sub New(ByRef user As Integer)
+    Public Sub New(ByVal user As Integer)
 
         userId = user
         service = New EventService()
@@ -21,7 +21,7 @@
 
     Private Sub Volunteers_Click(sender As Object, e As EventArgs) Handles Volunteers.Click
 
-        Dim obj1 As Volunteer_Form = New Volunteer_Form()
+        Dim obj1 As Volunteer_Form = New Volunteer_Form(userId)
         obj1.Show()
         Me.Hide()
 

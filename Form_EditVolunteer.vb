@@ -1,10 +1,12 @@
 ﻿Public Class Form_EditVolunteer
 
     Dim Volunteer_Id As Integer
+    Dim User As Integer
     Private service As VolunteerService
-    Public Sub New(ByVal Id As Integer)
+    Public Sub New(ByVal userId As Integer, ByVal Id As Integer)
 
         Volunteer_Id = Id
+        User = userId
         service = New VolunteerService()
         ' This call is required by the designer.
         InitializeComponent()
@@ -29,7 +31,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim obj1 As Volunteer_Form = New Volunteer_Form()
+        Dim obj1 As Volunteer_Form = New Volunteer_Form(User)
         obj1.Show()
         Me.Hide()
     End Sub
@@ -49,7 +51,7 @@
 
         service.EditVolunteer(Volunteer_Id, vol)
 
-        Dim obj1 As Volunteer_Form = New Volunteer_Form()
+        Dim obj1 As Volunteer_Form = New Volunteer_Form(USER)
         obj1.Show()
         Me.Hide()
     End Sub

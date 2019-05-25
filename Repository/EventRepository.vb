@@ -34,8 +34,8 @@
             Dim vol As VolunteerDetails = New VolunteerDetails()
             vol.Hours = r.Item("Hours")
             vol.Reimbursements = r.Item("Reimbursements")
-            vol.ShiftEndTime = r.Item("ShiftEndTime")
-            vol.ShiftStartTime = r.Item("ShiftStartTime")
+            vol.ShiftEnd = r.Item("ShiftEndTime")
+            vol.ShiftStart = r.Item("ShiftStartTime")
             vol.VolunteerId = r.Item("VolunteerId")
             events.EventVolunteerDetails.Add(vol)
         Next
@@ -48,14 +48,17 @@
 
     Public Sub AddEvent(ByVal User As Integer, ByVal events As Events)
 
-        Dim query As String = $"INSERT INTO EVENTS Output Inserted.Id 
-	 VALUES ({User},{events.Name },{events.Type },{events.EventDate },{events.Notes})"
+        Dim query As String = $"INSERT INTO EVENTS
+	 VALUES ('{User}','{events.Name }','{events.Type }','{events.EventDate }','{events.Notes}');
+SELECT  SCOPE_IDENTITY() As Id"
+
+
         Dim id As Integer = dataHelper.ExecuteQuery(query, Nothing).Tables(0).Rows(0).Item("Id")
 
         For Each r As VolunteerDetails In events.EventVolunteerDetails
 
-            query = $"insert into EVENT_VOLUNTEER_MAP values {User},{id},{r.VolunteerId },{r.Hours },
-                      {r.ShiftStartTime},{r.ShiftEndTime },{r.Expenses },{r.Reimbursements }"
+            query = $"insert into EVENT_VOLUNTEER_MAP values ({User},{id},{r.VolunteerId },{r.Hours },
+                      '{r.ShiftStart}','{r.ShiftEnd }',{r.Expenses },{r.Reimbursements })"
             dataHelper.ExecuteNonQuery(query, Nothing)
         Next
 
@@ -82,7 +85,7 @@
 
 
             query = $"insert into EVENT_VOLUNTEER_MAP values {User},{eventId},{r.VolunteerId },{r.Hours },
-                      {r.ShiftStartTime},{r.ShiftEndTime },{r.Expenses },{r.Reimbursements }"
+                      {r.ShiftStart},{r.ShiftEnd},{r.Expenses },{r.Reimbursements }"
             dataHelper.ExecuteNonQuery(query, Nothing)
         Next
 

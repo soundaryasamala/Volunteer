@@ -1,9 +1,11 @@
 ﻿Public Class Volunteer_Form
 
     Private service As VolunteerService
-    Public Sub New()
+    Private user As Integer
+    Public Sub New(userId As Integer)
         service = New VolunteerService()
         InitializeComponent()
+        user = userId
         BindGrid()
     End Sub
 
@@ -14,7 +16,7 @@
     End Sub
 
     Private Sub AddButton_Click(sender As Object, e As EventArgs) Handles addButton.Click
-        Dim obj1 As Add_Volunteer = New Add_Volunteer()
+        Dim obj1 As Add_Volunteer = New Add_Volunteer(user)
         obj1.Show()
         Me.Hide()
     End Sub
@@ -51,7 +53,7 @@
         For Each row As DataGridViewRow In DataGridView1.Rows
             isSelected = Convert.ToBoolean(row.Cells("CheckBox").Value)
             If isSelected Then
-                Dim obj1 As Form_EditVolunteer = New Form_EditVolunteer(Convert.ToInt32(row.Cells("ID").Value))
+                Dim obj1 As Form_EditVolunteer = New Form_EditVolunteer(user, Convert.ToInt32(row.Cells("ID").Value))
                 obj1.Show()
                 Me.Hide()
                 Exit For
@@ -61,5 +63,11 @@
             MsgBox("No Volunteers are Selected")
         End If
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim obj1 As Form_Events = New Form_Events(user)
+        obj1.Show()
+        Me.Hide()
     End Sub
 End Class

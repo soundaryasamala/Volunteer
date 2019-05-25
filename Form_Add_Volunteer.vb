@@ -1,10 +1,12 @@
 ﻿Public Class Add_Volunteer
 
     Private service As VolunteerService
+    Private user As Integer
 
-    Public Sub New()
+    Public Sub New(userId As Integer)
         InitializeComponent()
         service = New VolunteerService()
+        user = userId
 
     End Sub
 
@@ -22,7 +24,7 @@
         vol.HomePhoneNo = HomeNo.Text
         service.AddVolunteer(vol)
 
-        Dim obj1 As Volunteer_Form = New Volunteer_Form()
+        Dim obj1 As Volunteer_Form = New Volunteer_Form(user)
         obj1.Show()
         Me.Hide()
 
@@ -30,7 +32,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim obj1 As Volunteer_Form = New Volunteer_Form()
+        Dim obj1 As Volunteer_Form = New Volunteer_Form(user)
         obj1.Show()
         Me.Hide()
     End Sub

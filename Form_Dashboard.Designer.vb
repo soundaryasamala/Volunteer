@@ -26,6 +26,7 @@ Partial Class Volunteer_Form
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Volunteer_Form))
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel_Header = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LB_Header = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Edit = New System.Windows.Forms.Button()
@@ -36,12 +37,12 @@ Partial Class Volunteer_Form
         Me.search_image = New System.Windows.Forms.Label()
         Me.Main_Panel = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TEST_DATA_BASEDataSet = New desktop_app_mark_1.TEST_DATA_BASEDataSet()
+        Me.TESTDATABASEDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Title = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TEST_DATA_BASEDataSet = New desktop_app_mark_1.TEST_DATA_BASEDataSet()
-        Me.TESTDATABASEDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel_Header.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -65,12 +66,22 @@ Partial Class Volunteer_Form
         'Panel_Header
         '
         Me.Panel_Header.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Panel_Header.Controls.Add(Me.Button1)
         Me.Panel_Header.Controls.Add(Me.LB_Header)
         Me.Panel_Header.Location = New System.Drawing.Point(2, 2)
         Me.Panel_Header.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel_Header.Name = "Panel_Header"
         Me.Panel_Header.Size = New System.Drawing.Size(806, 56)
         Me.Panel_Header.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(9, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(41, 31)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Back"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'LB_Header
         '
@@ -204,6 +215,16 @@ Partial Class Volunteer_Form
         Me.DataGridView1.Size = New System.Drawing.Size(808, 306)
         Me.DataGridView1.TabIndex = 0
         '
+        'TEST_DATA_BASEDataSet
+        '
+        Me.TEST_DATA_BASEDataSet.DataSetName = "TEST_DATA_BASEDataSet"
+        Me.TEST_DATA_BASEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TESTDATABASEDataSetBindingSource
+        '
+        Me.TESTDATABASEDataSetBindingSource.DataSource = Me.TEST_DATA_BASEDataSet
+        Me.TESTDATABASEDataSetBindingSource.Position = 0
+        '
         'CheckBox
         '
         Me.CheckBox.HeaderText = ""
@@ -229,30 +250,21 @@ Partial Class Volunteer_Form
         '
         'Name
         '
-        Me.Name.DataPropertyName = "Name"
+        Me.Name.DataPropertyName = "Name_"
         Me.Name.HeaderText = "Name"
         Me.Name.Name = "Name"
         Me.Name.ReadOnly = True
         Me.Name.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Name.Width = 800
         '
-        'TEST_DATA_BASEDataSet
-        '
-        Me.TEST_DATA_BASEDataSet.DataSetName = "TEST_DATA_BASEDataSet"
-        Me.TEST_DATA_BASEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TESTDATABASEDataSetBindingSource
-        '
-        Me.TESTDATABASEDataSetBindingSource.DataSource = Me.TEST_DATA_BASEDataSet
-        Me.TESTDATABASEDataSetBindingSource.Position = 0
-        '
-        'Main_Form
+        'Volunteer_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(840, 424)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
+        ''    Me.Name = "Volunteer_Form"
         Me.Text = "Dashboard"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel_Header.ResumeLayout(False)
@@ -280,6 +292,7 @@ Partial Class Volunteer_Form
     Friend WithEvents TEST_DATA_BASEDataSet As TEST_DATA_BASEDataSet
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Edit As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents CheckBox As DataGridViewCheckBoxColumn
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Title As DataGridViewTextBoxColumn

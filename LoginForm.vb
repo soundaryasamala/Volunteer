@@ -9,7 +9,7 @@
 
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 
-        Dim Id As Boolean = service.ValidateLogin(UserId.Text, Password.Text)
+        Dim Id As Integer = service.ValidateLogin(UserId.Text, Password.Text)
 
         If (Id <> 0) Then
 
@@ -21,6 +21,21 @@
             MsgBox("Invalid User or Password")
         End If
 
+
+    End Sub
+
+    Private Sub Register_Click(sender As Object, e As EventArgs) Handles Register.Click
+
+        Dim Id As Integer = service.ValidateUser(UserId.Text)
+
+        If Id = 0 Then
+            service.AddUser(UserId.Text, Password.Text)
+        Else
+            MsgBox("User Already Exist!")
+        End If
+
+        UserId.Text = String.Empty
+        Password.Text = String.Empty
 
     End Sub
 End Class
