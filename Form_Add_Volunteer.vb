@@ -24,7 +24,29 @@ Public Class Add_Volunteer
         vol.Address = Address.Text
         vol.MobileNo = MobileNo.Text
         vol.HomePhoneNo = HomeNo.Text
+
+
+        If (vol.Title Is Nothing Or vol.Title Is String.Empty) Then
+            MsgBox("Enter Volunteer Title")
+            Return
+        End If
+
+        If (vol.Name Is Nothing Or vol.Name Is String.Empty) Then
+            MsgBox("Enter Volunteer Name")
+            Return
+        End If
+
+        If (vol.MobileNo Is Nothing Or Not IsNumeric(vol.MobileNo)) Then
+            MsgBox("Enter Valid MobileNo")
+            Return
+        End If
+
+        If (vol.HomePhoneNo Is Nothing Or Not IsNumeric(vol.HomePhoneNo)) Then
+            MsgBox("Enter Valid Phone number")
+            Return
+        End If
         service.AddVolunteer(vol, PictureBox1.Image)
+
 
         Dim obj1 As Volunteer_Form = New Volunteer_Form(user)
         obj1.Show()

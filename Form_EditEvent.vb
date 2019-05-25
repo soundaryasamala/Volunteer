@@ -35,6 +35,17 @@
         events.Notes = Notes.Text
         events.EventDate = EventDate.Value
         events.EventVolunteerDetails = New List(Of VolunteerDetails)
+
+        If (events.Name Is Nothing Or events.Name Is String.Empty) Then
+            MsgBox("Enter Event name")
+            Return
+        End If
+
+        If (events.Type Is Nothing Or events.Type Is String.Empty) Then
+            MsgBox("Enter Event Type")
+            Return
+        End If
+
         For Each r As DataGridViewRow In DataGridView1.Rows
             Dim vol As VolunteerDetails = New VolunteerDetails()
             If r.Cells("Volunteer").Value = Nothing Then

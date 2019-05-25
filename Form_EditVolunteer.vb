@@ -68,6 +68,27 @@ Public Class Form_EditVolunteer
         vol.SSN = SSN.Text
         vol.Dob = DOB.Value
 
+
+        If (vol.Title Is Nothing Or vol.Title Is String.Empty) Then
+            MsgBox("Enter Volunteer Title")
+            Return
+        End If
+
+        If (vol.Name Is Nothing Or vol.Name Is String.Empty) Then
+            MsgBox("Enter Volunteer Name")
+            Return
+        End If
+
+        If (vol.MobileNo Is Nothing Or Not IsNumeric(vol.MobileNo)) Then
+            MsgBox("Enter Valid MobileNo")
+            Return
+        End If
+
+        If (vol.HomePhoneNo Is Nothing Or Not IsNumeric(vol.HomePhoneNo)) Then
+            MsgBox("Enter Valid Phone number")
+            Return
+        End If
+
         service.EditVolunteer(Volunteer_Id, vol, PictureBox1.Image)
 
         Dim obj1 As Volunteer_Form = New Volunteer_Form(User)

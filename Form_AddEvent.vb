@@ -55,11 +55,25 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim events As Events = New Events()
+
+
+
         events.Name = EventName.Text
         events.Type = Type.Text
         events.Notes = Notes.Text
         events.EventDate = EventDate.Value
         events.EventVolunteerDetails = New List(Of VolunteerDetails)
+
+        If (events.Name Is Nothing Or events.Name Is String.Empty) Then
+            MsgBox("Enter Event name")
+            Return
+        End If
+
+        If (events.Type Is Nothing Or events.Type Is String.Empty) Then
+            MsgBox("Enter Event Type")
+            Return
+        End If
+
         For Each r As DataGridViewRow In DataGridView1.Rows
             If (r.Index <> DataGridView1.Rows.Count - 1) Then
 
