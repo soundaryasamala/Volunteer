@@ -27,7 +27,6 @@ Partial Class Form_EditVolunteer
         Me.Button2 = New System.Windows.Forms.Button()
         Me.NotesText = New System.Windows.Forms.TextBox()
         Me.Notes = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckedListBox2 = New System.Windows.Forms.CheckedListBox()
@@ -68,6 +67,7 @@ Partial Class Form_EditVolunteer
         Me.NameField = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.EditPhoto = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,10 +95,10 @@ Partial Class Form_EditVolunteer
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.EditPhoto)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.NotesText)
         Me.Panel2.Controls.Add(Me.Notes)
-        Me.Panel2.Controls.Add(Me.TextBox8)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.CheckedListBox2)
@@ -167,13 +167,6 @@ Partial Class Form_EditVolunteer
         Me.Notes.Size = New System.Drawing.Size(35, 13)
         Me.Notes.TabIndex = 42
         Me.Notes.Text = "Notes"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(640, 107)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(138, 20)
-        Me.TextBox8.TabIndex = 41
         '
         'PictureBox1
         '
@@ -497,6 +490,15 @@ Partial Class Form_EditVolunteer
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'EditPhoto
+        '
+        Me.EditPhoto.Location = New System.Drawing.Point(647, 100)
+        Me.EditPhoto.Name = "EditPhoto"
+        Me.EditPhoto.Size = New System.Drawing.Size(75, 23)
+        Me.EditPhoto.TabIndex = 45
+        Me.EditPhoto.Text = "Edit Photo"
+        Me.EditPhoto.UseVisualStyleBackColor = True
+        '
         'Form_EditVolunteer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -557,10 +559,10 @@ Partial Class Form_EditVolunteer
     Friend WithEvents Label18 As Label
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox8 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents NotesText As TextBox
     Friend WithEvents Notes As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents EditPhoto As Button
 End Class

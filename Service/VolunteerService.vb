@@ -1,4 +1,5 @@
 ﻿Imports desktop_app_mark_1
+Imports System.Drawing
 
 Public Class VolunteerService
 
@@ -18,9 +19,9 @@ Public Class VolunteerService
 
     End Function
 
-    Public Function AddVolunteer(ByVal vol As Volunteer)
+    Public Function AddVolunteer(ByVal vol As Volunteer, ByVal image As Image)
 
-        repo.AddVolunteer(vol)
+        repo.AddVolunteer(vol, image)
 
     End Function
 
@@ -35,9 +36,9 @@ Public Class VolunteerService
 
     End Function
 
-    Public Function EditVolunteer(volunteer_Id As Integer, vol As Volunteer)
+    Public Function EditVolunteer(volunteer_Id As Integer, vol As Volunteer, image As Image)
 
-        repo.EditVolunteer(volunteer_Id, vol)
+        repo.EditVolunteer(volunteer_Id, vol, image)
 
     End Function
 End Class

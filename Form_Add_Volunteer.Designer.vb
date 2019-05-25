@@ -25,9 +25,9 @@ Partial Class Add_Volunteer
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Notes = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckedListBox2 = New System.Windows.Forms.CheckedListBox()
@@ -68,7 +68,7 @@ Partial Class Add_Volunteer
         Me.Name_Text = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.UploadPhoto = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,10 +96,10 @@ Partial Class Add_Volunteer
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.UploadPhoto)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.TextBox9)
         Me.Panel2.Controls.Add(Me.Notes)
-        Me.Panel2.Controls.Add(Me.TextBox8)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.CheckedListBox2)
@@ -144,6 +144,15 @@ Partial Class Add_Volunteer
         Me.Panel2.Size = New System.Drawing.Size(808, 381)
         Me.Panel2.TabIndex = 1
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(710, 351)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 44
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'TextBox9
         '
         Me.TextBox9.Location = New System.Drawing.Point(141, 361)
@@ -159,13 +168,6 @@ Partial Class Add_Volunteer
         Me.Notes.Size = New System.Drawing.Size(35, 13)
         Me.Notes.TabIndex = 42
         Me.Notes.Text = "Notes"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(640, 107)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(138, 20)
-        Me.TextBox8.TabIndex = 41
         '
         'PictureBox1
         '
@@ -491,14 +493,14 @@ Partial Class Add_Volunteer
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Button2
+        'UploadPhoto
         '
-        Me.Button2.Location = New System.Drawing.Point(710, 351)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 44
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.UploadPhoto.Location = New System.Drawing.Point(643, 103)
+        Me.UploadPhoto.Name = "UploadPhoto"
+        Me.UploadPhoto.Size = New System.Drawing.Size(86, 23)
+        Me.UploadPhoto.TabIndex = 45
+        Me.UploadPhoto.Text = "Upload Photo"
+        Me.UploadPhoto.UseVisualStyleBackColor = True
         '
         'Add_Volunteer
         '
@@ -560,10 +562,10 @@ Partial Class Add_Volunteer
     Friend WithEvents Label18 As Label
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox8 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Notes As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents UploadPhoto As Button
 End Class

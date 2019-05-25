@@ -42,5 +42,20 @@ Public Class DataHelper
 
     End Function
 
+    Public Function ExecuteNonQuery(ByVal query As String, ByVal parameters As Array, ByVal val As Boolean)
+
+        Using conn As SqlConnection = New SqlConnection(My.Settings.connString)
+
+            Dim cmd As SqlCommand = New SqlCommand(query, conn)
+            cmd.Parameters.AddRange(parameters)
+            conn.Open()
+            Return cmd.ExecuteNonQuery()
+
+        End Using
+
+
+
+    End Function
+
 
 End Class

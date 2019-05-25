@@ -1,4 +1,7 @@
-﻿Public Class Form_EditVolunteer
+﻿Imports System.Data.SqlClient
+Imports System.IO
+
+Public Class Form_EditVolunteer
 
     Dim Volunteer_Id As Integer
     Dim User As Integer
@@ -24,6 +27,22 @@
         'Email.Text = volunteer.Email(0)
         SSN.Text = volunteer.SSN
         DOB.Value = volunteer.Dob
+
+        Dim constr As String = My.Settings.connString
+        Try
+            Using conn As SqlConnection = New SqlConnection(constr)
+                Using cmd As SqlCommand = New SqlCommand("SELECT Image FROM Volunteer WHERE Id = @Id", conn)
+                    cmd.Parameters.AddWithValue("@Id", Volunteer_Id)
+                    conn.Open()
+                    Dim bytes As Byte() = CType(cmd.ExecuteScalar(), Byte())
+                    conn.Close()
+                    PictureBox1.Image = Image.FromStream(New MemoryStream(bytes))
+                End Using
+            End Using
+        Catch e As Exception
+
+        End Try
+
     End Sub
 
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
@@ -49,10 +68,22 @@
         vol.SSN = SSN.Text
         vol.Dob = DOB.Value
 
-        service.EditVolunteer(Volunteer_Id, vol)
+        service.EditVolunteer(Volunteer_Id, vol, PictureBox1.Image)
 
-        Dim obj1 As Volunteer_Form = New Volunteer_Form(USER)
+        Dim obj1 As Volunteer_Form = New Volunteer_Form(User)
         obj1.Show()
         Me.Hide()
+    End Sub
+
+
+
+    Private Sub EditPhoto_Click(sender As Object, e As EventArgs) Handles EditPhoto.Click
+
+        Dim OpenFileDialog1 As New OpenFileDialog
+
+        OpenFileDialog1.Filter = "Picture Files (*)|*.bmp;*.gif;*.jpg"
+        If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+        End If
     End Sub
 End Class

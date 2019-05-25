@@ -1,4 +1,6 @@
-﻿Imports desktop_app_mark_1
+﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports desktop_app_mark_1
 
 Public Class VolunteerRepository
 
@@ -32,20 +34,55 @@ Public Class VolunteerRepository
         Return dt
     End Function
 
-    Public Sub EditVolunteer(volunteer_Id As Integer, vol As Volunteer)
-        Dim query As String = $"Update Volunteer Set
+    Public Sub EditVolunteer(volunteer_Id As Integer, vol As Volunteer, ByVal image As Image)
+
+        If image Is Nothing Then
+            Dim query As String = $"Update Volunteer Set
 	 Title = '{vol.Title }',Name ='{vol.Name }',Address = '{vol.Address }',Work_STATUS_ID = 1,PHONE_HOME ='{vol.HomePhoneNo }',PHONE_MOBILE = '{vol.MobileNo}'
 	,SOCIAL_SECURITY_NUMBER ='{vol.SSN }',DATE_OF_BIRTH = '{vol.Dob }',VOLUNTEER_STATUS = {Convert.ToInt32(vol.VolunteerStatus) },HIRE_DATE ='{vol.HireDate  }',NOTES = '{vol.Notes }'
      where ID = {volunteer_Id }"
-        dataHelper.ExecuteNonQuery(query, Nothing)
+            dataHelper.ExecuteNonQuery(query, Nothing)
+        Else
+
+            Using ms As New MemoryStream
+
+                image.Save(ms, image.RawFormat)
+                Dim par As SqlParameter = New SqlParameter("@image", ms.ToArray)
+                Dim array As SqlParameter() = New SqlParameter(1) {}
+                array(0) = par
+
+                Dim query As String = $"Update Volunteer Set
+	 Title = '{vol.Title }',Name ='{vol.Name }',Address = '{vol.Address }',Work_STATUS_ID = 1,PHONE_HOME ='{vol.HomePhoneNo }',PHONE_MOBILE = '{vol.MobileNo}'
+	,SOCIAL_SECURITY_NUMBER ='{vol.SSN }',DATE_OF_BIRTH = '{vol.Dob }',VOLUNTEER_STATUS = {Convert.ToInt32(vol.VolunteerStatus) },HIRE_DATE ='{vol.HireDate  }',NOTES = '{vol.Notes },Image = @image'
+     where ID = {volunteer_Id })"
+                dataHelper.ExecuteNonQuery(query, array, True)
+            End Using
+        End If
     End Sub
 
-    Public Function AddVolunteer(ByVal vol As Volunteer)
+    Public Function AddVolunteer(ByVal vol As Volunteer, ByVal image As Image)
 
-        Dim query As String = $"INSERT INTO VOLUNTEER 
+        If image Is Nothing Then
+            Dim query As String = $"INSERT INTO VOLUNTEER 
 	 VALUES ('{vol.Title }','{vol.Name }','{vol.Address }',{1},'{vol.HomePhoneNo }','{vol.MobileNo}'
 	,'{vol.SSN }','{vol.Dob }',{Convert.ToInt32(vol.VolunteerStatus) },'{vol.HireDate  }','','')"
-        dataHelper.ExecuteNonQuery(query, Nothing)
+            dataHelper.ExecuteNonQuery(query, Nothing)
+        Else
+            Using ms As New MemoryStream
+
+                image.Save(ms, image.RawFormat)
+                Dim par As SqlParameter = New SqlParameter("@image", ms.ToArray)
+                Dim array As SqlParameter() = New SqlParameter(1) {}
+                array(0) = par
+
+                Dim query As String = $"INSERT INTO VOLUNTEER 
+	 VALUES('{vol.Title }','{vol.Name }','{vol.Address }',{1},'{vol.HomePhoneNo }','{vol.MobileNo}'
+    ,'{vol.SSN }','{vol.Dob }',{Convert.ToInt32(vol.VolunteerStatus) },'{vol.HireDate  }','','',@image)"
+                dataHelper.ExecuteNonQuery(query, array, True)
+            End Using
+
+        End If
+
 
     End Function
 
