@@ -9,6 +9,9 @@ Public Class Add_Volunteer
         InitializeComponent()
         service = New VolunteerService()
         user = userId
+        WorkStatusField.DataSource = [Enum].GetValues(GetType(WorkStatus))
+        WorkStatusField.SelectedItem = WorkStatus.Working
+
 
     End Sub
 
@@ -95,4 +98,10 @@ Public Class Add_Volunteer
         End Using
         Return newImage
     End Function
+
+
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles WorkStatusField.SelectedIndexChanged
+
+    End Sub
 End Class

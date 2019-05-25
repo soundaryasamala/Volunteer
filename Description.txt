@@ -1,0 +1,4 @@
+->Login/Register User from the Login Page
+->List of Events Created by user will be displayed along with options to add/edit/delete events
+->Navigation to volunteers page is also provided
+->On selecting Volunteers List of volunteers is displayed along with add/edit/delete 

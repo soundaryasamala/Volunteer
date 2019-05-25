@@ -25,6 +25,7 @@ Partial Class Add_Volunteer
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.UploadPhoto = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Notes = New System.Windows.Forms.Label()
@@ -44,7 +45,7 @@ Partial Class Add_Volunteer
         Me.Label14 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.WorkStatusField = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -68,7 +69,6 @@ Partial Class Add_Volunteer
         Me.Name_Text = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.UploadPhoto = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,7 +116,7 @@ Partial Class Add_Volunteer
         Me.Panel2.Controls.Add(Me.Label14)
         Me.Panel2.Controls.Add(Me.ComboBox3)
         Me.Panel2.Controls.Add(Me.Label13)
-        Me.Panel2.Controls.Add(Me.ComboBox2)
+        Me.Panel2.Controls.Add(Me.WorkStatusField)
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.ComboBox1)
         Me.Panel2.Controls.Add(Me.Label11)
@@ -143,6 +143,15 @@ Partial Class Add_Volunteer
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(808, 381)
         Me.Panel2.TabIndex = 1
+        '
+        'UploadPhoto
+        '
+        Me.UploadPhoto.Location = New System.Drawing.Point(643, 103)
+        Me.UploadPhoto.Name = "UploadPhoto"
+        Me.UploadPhoto.Size = New System.Drawing.Size(86, 23)
+        Me.UploadPhoto.TabIndex = 45
+        Me.UploadPhoto.Text = "Upload Photo"
+        Me.UploadPhoto.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -301,13 +310,13 @@ Partial Class Add_Volunteer
         Me.Label13.TabIndex = 25
         Me.Label13.Text = "Veteran Status"
         '
-        'ComboBox2
+        'WorkStatusField
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(403, 186)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 24
+        Me.WorkStatusField.FormattingEnabled = True
+        Me.WorkStatusField.Location = New System.Drawing.Point(403, 186)
+        Me.WorkStatusField.Name = "WorkStatusField"
+        Me.WorkStatusField.Size = New System.Drawing.Size(121, 21)
+        Me.WorkStatusField.TabIndex = 24
         '
         'Label12
         '
@@ -337,7 +346,7 @@ Partial Class Add_Volunteer
         '
         'VScrollBar1
         '
-        Me.VScrollBar1.Location = New System.Drawing.Point(788, 0)
+        Me.VScrollBar1.Location = New System.Drawing.Point(788, 4)
         Me.VScrollBar1.Name = "VScrollBar1"
         Me.VScrollBar1.Size = New System.Drawing.Size(20, 381)
         Me.VScrollBar1.TabIndex = 19
@@ -493,15 +502,6 @@ Partial Class Add_Volunteer
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'UploadPhoto
-        '
-        Me.UploadPhoto.Location = New System.Drawing.Point(643, 103)
-        Me.UploadPhoto.Name = "UploadPhoto"
-        Me.UploadPhoto.Size = New System.Drawing.Size(86, 23)
-        Me.UploadPhoto.TabIndex = 45
-        Me.UploadPhoto.Text = "Upload Photo"
-        Me.UploadPhoto.UseVisualStyleBackColor = True
-        '
         'Add_Volunteer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -552,7 +552,7 @@ Partial Class Add_Volunteer
     Friend WithEvents Label14 As Label
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents WorkStatusField As ComboBox
     Friend WithEvents Label12 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button1 As Button
