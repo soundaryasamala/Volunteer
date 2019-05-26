@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Drawing2D
 Imports System.IO
 
 Public Class Form_EditVolunteer
@@ -27,6 +28,7 @@ Public Class Form_EditVolunteer
         'Email.Text = volunteer.Email(0)
         SSN.Text = volunteer.SSN
         DOB.Value = volunteer.Dob
+
 
         Dim constr As String = My.Settings.connString
         Try
@@ -96,7 +98,30 @@ Public Class Form_EditVolunteer
         Me.Hide()
     End Sub
 
-
+    Public Shared Function ResizeImage(ByVal image As Image,
+      ByVal size As Size, Optional ByVal preserveAspectRatio As Boolean = True) As Image
+        Dim newWidth As Integer
+        Dim newHeight As Integer
+        If preserveAspectRatio Then
+            Dim originalWidth As Integer = image.Width
+            Dim originalHeight As Integer = image.Height
+            Dim percentWidth As Single = CSng(size.Width) / CSng(originalWidth)
+            Dim percentHeight As Single = CSng(size.Height) / CSng(originalHeight)
+            Dim percent As Single = If(percentHeight < percentWidth,
+                    percentHeight, percentWidth)
+            newWidth = CInt(originalWidth * percent)
+            newHeight = CInt(originalHeight * percent)
+        Else
+            newWidth = size.Width
+            newHeight = size.Height
+        End If
+        Dim newImage As Image = New Bitmap(newWidth, newHeight)
+        Using graphicsHandle As Graphics = Graphics.FromImage(newImage)
+            graphicsHandle.InterpolationMode = InterpolationMode.HighQualityBicubic
+            graphicsHandle.DrawImage(image, 0, 0, newWidth, newHeight)
+        End Using
+        Return newImage
+    End Function
 
     Private Sub EditPhoto_Click(sender As Object, e As EventArgs) Handles EditPhoto.Click
 
@@ -104,7 +129,8 @@ Public Class Form_EditVolunteer
 
         OpenFileDialog1.Filter = "Picture Files (*)|*.bmp;*.gif;*.jpg"
         If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+            PictureBox1.Image = ResizeImage(Image.FromFile(OpenFileDialog1.FileName), New Size(PictureBox1.Height, PictureBox1.Width))
+
         End If
     End Sub
 End Class
