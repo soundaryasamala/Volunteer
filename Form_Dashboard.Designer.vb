@@ -37,8 +37,6 @@ Partial Class Volunteer_Form
         Me.search_image = New System.Windows.Forms.Label()
         Me.Main_Panel = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TEST_DATA_BASEDataSet = New desktop_app_mark_1.TEST_DATA_BASEDataSet()
-        Me.TESTDATABASEDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Title = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -48,8 +46,7 @@ Partial Class Volunteer_Form
         Me.Panel1.SuspendLayout()
         Me.Main_Panel.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TEST_DATA_BASEDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TESTDATABASEDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -215,15 +212,6 @@ Partial Class Volunteer_Form
         Me.DataGridView1.Size = New System.Drawing.Size(808, 306)
         Me.DataGridView1.TabIndex = 0
         '
-        'TEST_DATA_BASEDataSet
-        '
-        Me.TEST_DATA_BASEDataSet.DataSetName = "TEST_DATA_BASEDataSet"
-        Me.TEST_DATA_BASEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TESTDATABASEDataSetBindingSource
-        '
-        Me.TESTDATABASEDataSetBindingSource.DataSource = Me.TEST_DATA_BASEDataSet
-        Me.TESTDATABASEDataSetBindingSource.Position = 0
         '
         'CheckBox
         '
@@ -272,8 +260,6 @@ Partial Class Volunteer_Form
         Me.Panel1.PerformLayout()
         Me.Main_Panel.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TEST_DATA_BASEDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TESTDATABASEDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -288,8 +274,6 @@ Partial Class Volunteer_Form
     Friend WithEvents deleteButton As Button
     Friend WithEvents addButton As Button
     Friend WithEvents Main_Panel As Panel
-    Friend WithEvents TESTDATABASEDataSetBindingSource As BindingSource
-    Friend WithEvents TEST_DATA_BASEDataSet As TEST_DATA_BASEDataSet
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Edit As Button
     Friend WithEvents Button1 As Button
