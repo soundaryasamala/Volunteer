@@ -9,6 +9,18 @@
 
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 
+        If UserId.Text = Nothing Or UserId.Text = String.Empty Then
+
+            MsgBox("Enter User!")
+            Return
+        End If
+
+
+        If Password.Text = Nothing Or Password.Text = String.Empty Then
+
+            MsgBox("Enter Password!")
+            Return
+        End If
         Dim Id As Integer = service.ValidateLogin(UserId.Text, Password.Text)
 
         If (Id <> 0) Then
@@ -25,6 +37,19 @@
     End Sub
 
     Private Sub Register_Click(sender As Object, e As EventArgs) Handles Register.Click
+
+        If UserId.Text = Nothing Or UserId.Text = String.Empty Then
+
+            MsgBox("Enter User!")
+            Return
+        End If
+
+
+        If Password.Text = Nothing Or Password.Text = String.Empty Then
+
+            MsgBox("Enter Password!")
+            Return
+        End If
 
         Dim Id As Integer = service.ValidateUser(UserId.Text)
 
