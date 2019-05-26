@@ -23,6 +23,7 @@ Partial Class Add_Volunteer
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.UploadPhoto = New System.Windows.Forms.Button()
@@ -68,7 +69,6 @@ Partial Class Add_Volunteer
         Me.Name_Text = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Logout = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +83,15 @@ Partial Class Add_Volunteer
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(841, 46)
         Me.Panel1.TabIndex = 0
+        '
+        'Logout
+        '
+        Me.Logout.Location = New System.Drawing.Point(752, 3)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(75, 23)
+        Me.Logout.TabIndex = 1
+        Me.Logout.Text = "Log Out"
+        Me.Logout.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -494,15 +503,6 @@ Partial Class Add_Volunteer
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'Logout
-        '
-        Me.Logout.Location = New System.Drawing.Point(752, 3)
-        Me.Logout.Name = "Logout"
-        Me.Logout.Size = New System.Drawing.Size(75, 23)
-        Me.Logout.TabIndex = 1
-        Me.Logout.Text = "Log Out"
-        Me.Logout.UseVisualStyleBackColor = True
         '
         'Add_Volunteer
         '

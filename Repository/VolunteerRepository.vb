@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Imaging
 Imports System.IO
 Imports desktop_app_mark_1
 
@@ -46,14 +47,14 @@ Public Class VolunteerRepository
 
             Using ms As New MemoryStream
 
-                image.Save(ms, image.RawFormat)
+                image.Save(ms, ImageFormat.Jpeg)
                 Dim par As SqlParameter = New SqlParameter("@image", ms.ToArray)
-                Dim array As SqlParameter() = New SqlParameter(1) {}
+                Dim array As SqlParameter() = New SqlParameter(0) {}
                 array(0) = par
 
                 Dim query As String = $"Update Volunteer Set
 	 Title = '{vol.Title }',Name ='{vol.Name }',Address = '{vol.Address }',Work_STATUS_ID = 1,PHONE_HOME ='{vol.HomePhoneNo }',PHONE_MOBILE = '{vol.MobileNo}'
-	,SOCIAL_SECURITY_NUMBER ='{vol.SSN }',DATE_OF_BIRTH = '{vol.Dob }',VOLUNTEER_STATUS = {Convert.ToInt32(vol.VolunteerStatus) },HIRE_DATE ='{vol.HireDate  }',NOTES = '{vol.Notes },Image = @image'
+	,SOCIAL_SECURITY_NUMBER ='{vol.SSN }',DATE_OF_BIRTH = '{vol.Dob }',VOLUNTEER_STATUS = {Convert.ToInt32(vol.VolunteerStatus) },HIRE_DATE ='{vol.HireDate  }',NOTES = '{vol.Notes },Image = @image
      where ID = {volunteer_Id })"
                 dataHelper.ExecuteNonQuery(query, array, True)
             End Using
@@ -70,9 +71,9 @@ Public Class VolunteerRepository
         Else
             Using ms As New MemoryStream
 
-                image.Save(ms, image.RawFormat)
+                image.Save(ms, ImageFormat.Jpeg)
                 Dim par As SqlParameter = New SqlParameter("@image", ms.ToArray)
-                Dim array As SqlParameter() = New SqlParameter(1) {}
+                Dim array As SqlParameter() = New SqlParameter(0) {}
                 array(0) = par
 
                 Dim query As String = $"INSERT INTO VOLUNTEER 
@@ -95,7 +96,7 @@ Public Class VolunteerRepository
 
     Public Function GetVolunteer(ByVal id As Integer) As Volunteer
         Dim query As String = $"SELECT TITLE,NAME,ADDRESS,WORK_STATUS_ID,PHONE_HOME,PHONE_MOBILE,SOCIAL_SECURITY_NUMBER,
-	DATE_OF_BIRTH,VOLUNTEER_STATUS,HIRE_DATE,NOTES,PHYSICAL_DISABILITY FROM VOLUNTEER 
+	DATE_OF_BIRTH,VOLUNTEER_STATUS,HIRE_DATE,NOTES,PHYSICAL_DISABILITY,Image FROM VOLUNTEER 
     	WHERE ID = {id}"
         Dim Vol As Volunteer = New Volunteer()
 
@@ -113,6 +114,7 @@ Public Class VolunteerRepository
         Vol.HireDate = row.Item("HIRE_DATE")
         Vol.WorkStatus = row.Item("WORK_STATUS_ID")
         Vol.Notes = row.Item("Notes")
+        Vol.Image = row.Item("Image")
 
         'query = $"SELECT DEGREE_ID,DATE_OF_GRADUATION FROM VOLUNTEER_EDUCATION WHERE VOLUNTEER_ID = {id}"
         'dt = dataHelper.ExecuteQuery(query, Nothing).Tables(0)

@@ -21,6 +21,7 @@
     Public ReasonForTermination As String
     Public Skills As List(Of String)
     Public Notes As String
+    Public Image As Byte()
     Public Sub New()
 
     End Sub

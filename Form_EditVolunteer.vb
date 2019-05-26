@@ -27,7 +27,12 @@ Public Class Form_EditVolunteer
         HomeNo.Text = volunteer.HomePhoneNo
         'Email.Text = volunteer.Email(0)
         SSN.Text = volunteer.SSN
-        DOB.Value = volunteer.Dob
+        Try
+            DOB.Value = volunteer.Dob
+        Catch
+            DOB.Value = Date.Now
+        End Try
+
 
 
         Dim constr As String = My.Settings.connString

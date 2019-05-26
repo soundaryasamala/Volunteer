@@ -112,4 +112,18 @@ Public Class Add_Volunteer
         Me.Hide()
 
     End Sub
+
+    Private Sub MobileNo_TextChanged(sender As Object, e As EventArgs) Handles MobileNo.TextChanged
+        If (MobileNo.Text Is Nothing Or Not IsNumeric(MobileNo.Text)) Then
+            MsgBox("Enter Valid MobileNo")
+            Return
+        End If
+    End Sub
+
+    Private Sub HomeNo_TextChanged(sender As Object, e As EventArgs) Handles HomeNo.TextChanged
+        If (HomeNo.Text Is Nothing Or Not IsNumeric(HomeNo.Text)) Then
+            MsgBox("Enter Valid Home number")
+            Return
+        End If
+    End Sub
 End Class

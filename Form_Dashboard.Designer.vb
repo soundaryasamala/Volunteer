@@ -25,6 +25,7 @@ Partial Class Volunteer_Form
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Volunteer_Form))
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel_Header = New System.Windows.Forms.Panel()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.LB_Header = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -40,7 +41,6 @@ Partial Class Volunteer_Form
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Title = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Logout = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel_Header.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -70,6 +70,15 @@ Partial Class Volunteer_Form
         Me.Panel_Header.Name = "Panel_Header"
         Me.Panel_Header.Size = New System.Drawing.Size(806, 56)
         Me.Panel_Header.TabIndex = 0
+        '
+        'Logout
+        '
+        Me.Logout.Location = New System.Drawing.Point(731, 0)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(75, 23)
+        Me.Logout.TabIndex = 10
+        Me.Logout.Text = "Log Out"
+        Me.Logout.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -237,21 +246,12 @@ Partial Class Volunteer_Form
         '
         'Name
         '
-        Me.Name.DataPropertyName = "Name_"
+        Me.Name.DataPropertyName = "Name"
         Me.Name.HeaderText = "Name"
         Me.Name.Name = "Name"
         Me.Name.ReadOnly = True
         Me.Name.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Name.Width = 800
-        '
-        'Logout
-        '
-        Me.Logout.Location = New System.Drawing.Point(731, 0)
-        Me.Logout.Name = "Logout"
-        Me.Logout.Size = New System.Drawing.Size(75, 23)
-        Me.Logout.TabIndex = 10
-        Me.Logout.Text = "Log Out"
-        Me.Logout.UseVisualStyleBackColor = True
         '
         'Volunteer_Form
         '
@@ -260,7 +260,6 @@ Partial Class Volunteer_Form
         Me.ClientSize = New System.Drawing.Size(840, 424)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
-
         Me.Text = "Dashboard"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel_Header.ResumeLayout(False)
@@ -285,9 +284,9 @@ Partial Class Volunteer_Form
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Edit As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Logout As Button
     Friend WithEvents CheckBox As DataGridViewCheckBoxColumn
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Title As DataGridViewTextBoxColumn
     Friend WithEvents Name As DataGridViewTextBoxColumn
-    Friend WithEvents Logout As Button
 End Class
