@@ -148,11 +148,6 @@
     <Compile Include="Service\LoginService.vb" />
     <Compile Include="Service\VolunteerService.vb" />
     <Compile Include="Settings.vb" />
-    <Compile Include="TEST_DATA_BASEDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TEST_DATA_BASEDataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form_EditEvent.resx">
@@ -194,17 +189,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="TEST_DATA_BASEDataSet.xsc">
-      <DependentUpon>TEST_DATA_BASEDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TEST_DATA_BASEDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TEST_DATA_BASEDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TEST_DATA_BASEDataSet.xss">
-      <DependentUpon>TEST_DATA_BASEDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

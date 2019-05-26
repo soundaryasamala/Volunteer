@@ -66,18 +66,6 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=demodb;Persist Security"& _ 
-            " Info=False;User ID=kalyan@dbba;Password=Aa1111111111;MultipleActiveResultSets=F"& _ 
-            "alse;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")>  _
-        Public ReadOnly Property test_data_base() As String
-            Get
-                Return CType(Me("test_data_base"),String)
-            End Get
-        End Property
-        
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Server=tcp:dbba.database.windows.net,1433;Initial Catalog=demodb;Persist Security"& _ 
