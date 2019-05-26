@@ -12,37 +12,12 @@
         volunteerService = New VolunteerService()
         ' This call is required by the designer.
         InitializeComponent()
-        FillVolunteer(0)
+        Me.volunteer.DataSource = volunteerService.GetVolunteersGrid()
+        Me.volunteer.DisplayMember = "Name"
+        Me.volunteer.ValueMember = "ID"
 
     End Sub
 
-    Private Sub FillVolunteer(ByVal index As Integer)
-
-        Dim dt As DataTable = volunteerService.GetVolunteersGrid()
-
-        Dim cbCell As DataGridViewComboBoxCell = DataGridView1.Rows(index).Cells("Volunteer")
-
-        Dim list As List(Of String) = New List(Of String)
-
-
-        For Each r As DataRow In dt.Rows
-
-            list.Add(r.Item("NAME"))
-
-        Next
-
-        cbCell.Items.AddRange(list.ToArray())
-
-        cbCell.DataSource = dt
-
-        cbCell.DisplayMember = "NAME"
-
-        cbCell.ValueMember = "ID"
-
-
-
-
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
@@ -121,11 +96,6 @@
 
     End Sub
 
-
-
-    Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs)
-        FillVolunteer(e.RowIndex)
-    End Sub
 
 
 End Class

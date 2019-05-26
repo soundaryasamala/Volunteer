@@ -26,17 +26,20 @@
         events.Name = row.Item("Name")
         events.Type = row.Item("Type")
         events.Notes = row.Item("Notes")
+        events.EventDate = row.Item("EVENT_DATE")
         events.EventVolunteerDetails = New List(Of VolunteerDetails)
         query = $"Select  VOLUNTEER_ID , HOURS ,SHIFT_START_TIME ,SHIFT_END_TIME ,EXPENSES ,
-                 REIMBURSEMENTS WHERE USER_ID ={User} AND ID = {eventId }"
+                 REIMBURSEMENTS From Event_volunteer_map WHERE USER_ID ={User} AND EVENT_ID = {eventId }"
 
+        dt = dataHelper.ExecuteQuery(query, Nothing).Tables(0)
         For Each r As DataRow In dt.Rows
             Dim vol As VolunteerDetails = New VolunteerDetails()
             vol.Hours = r.Item("Hours")
             vol.Reimbursements = r.Item("Reimbursements")
-            vol.ShiftEnd = r.Item("ShiftEndTime")
-            vol.ShiftStart = r.Item("ShiftStartTime")
-            vol.VolunteerId = r.Item("VolunteerId")
+            vol.Expenses = r.Item("Expenses")
+            vol.ShiftEnd = r.Item("SHIFT_END_TIME")
+            vol.ShiftStart = r.Item("SHIFT_START_TIME")
+            vol.VolunteerId = r.Item("VOLUNTEER_ID")
             events.EventVolunteerDetails.Add(vol)
         Next
 
@@ -76,16 +79,16 @@ SELECT  SCOPE_IDENTITY() As Id"
 
     Public Sub UpdateEvent(ByVal User As Integer, ByVal eventId As Integer, ByVal events As Events)
 
-        Dim query As String = $"UPDATE EVENTS SET NAME = {events.Name },TYPE = {events.Type },
-           NOTES ={events.Notes },EVENT_DATE ={events.EventDate };
+        Dim query As String = $"UPDATE EVENTS SET NAME = '{events.Name }',TYPE = '{events.Type }',
+           NOTES = '{events.Notes }',EVENT_DATE ='{events.EventDate }';
             Delete from EVENT_VOLUNTEER_MAP where user_id = {User} and  event_id = {eventId}"
         dataHelper.ExecuteNonQuery(query, Nothing)
 
         For Each r As VolunteerDetails In events.EventVolunteerDetails
 
 
-            query = $"insert into EVENT_VOLUNTEER_MAP values {User},{eventId},{r.VolunteerId },{r.Hours },
-                      {r.ShiftStart},{r.ShiftEnd},{r.Expenses },{r.Reimbursements }"
+            query = $"insert into EVENT_VOLUNTEER_MAP values ({User},{eventId},{r.VolunteerId },{r.Hours },
+                      '{r.ShiftStart}','{r.ShiftEnd}',{r.Expenses },{r.Reimbursements })"
             dataHelper.ExecuteNonQuery(query, Nothing)
         Next
 

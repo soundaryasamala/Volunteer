@@ -49,7 +49,6 @@ Partial Class Add_Volunteer
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -120,7 +119,6 @@ Partial Class Add_Volunteer
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.ComboBox1)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.VScrollBar1)
         Me.Panel2.Controls.Add(Me.DateTimePicker1)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label9)
@@ -344,13 +342,6 @@ Partial Class Add_Volunteer
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "Education"
         '
-        'VScrollBar1
-        '
-        Me.VScrollBar1.Location = New System.Drawing.Point(788, 4)
-        Me.VScrollBar1.Name = "VScrollBar1"
-        Me.VScrollBar1.Size = New System.Drawing.Size(20, 381)
-        Me.VScrollBar1.TabIndex = 19
-        '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(403, 143)
@@ -540,7 +531,6 @@ Partial Class Add_Volunteer
     Friend WithEvents SSN As MaskedTextBox
     Friend WithEvents CheckedListBox1 As CheckedListBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents VScrollBar1 As VScrollBar
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
