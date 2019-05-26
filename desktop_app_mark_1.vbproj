@@ -117,6 +117,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\Degree.vb" />
+    <Compile Include="Models\Education.vb" />
     <Compile Include="Models\Events.vb" />
     <Compile Include="Models\Media.vb" />
     <Compile Include="Models\Skills.vb" />
@@ -124,6 +125,7 @@
     <Compile Include="Models\Volunteer.vb" />
     <Compile Include="Models\VolunteerDetails.vb" />
     <Compile Include="Models\VolunteerEducation.vb" />
+    <Compile Include="Models\VolunteerStatus.vb" />
     <Compile Include="Models\WorkStatus.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

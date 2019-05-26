@@ -33,7 +33,12 @@ Public Class Form_EditVolunteer
             DOB.Value = Date.Now
         End Try
 
-
+        WorkStatusField.DataSource = [Enum].GetValues(GetType(WorkStatus))
+        WorkStatusField.SelectedItem = WorkStatus.Working
+        SkillField.DataSource = [Enum].GetValues(GetType(Skills))
+        VeteranStausField.DataSource = [Enum].GetValues(GetType(VeteranStatus))
+        VolunteerStatusField.DataSource = [Enum].GetValues(GetType(VolunteerStatus))
+        EducationField.DataSource = [Enum].GetValues(GetType(Education))
 
         Dim constr As String = My.Settings.connString
         Try

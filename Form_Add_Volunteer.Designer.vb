@@ -32,7 +32,7 @@ Partial Class Add_Volunteer
         Me.Notes = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.CheckedListBox2 = New System.Windows.Forms.CheckedListBox()
+        Me.SkillsField = New System.Windows.Forms.CheckedListBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -40,20 +40,20 @@ Partial Class Add_Volunteer
         Me.Label17 = New System.Windows.Forms.Label()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.VolunteerStatusField = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.VeteranStatusField = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.WorkStatusField = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.EducationField = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.Media = New System.Windows.Forms.CheckedListBox()
         Me.SSN = New System.Windows.Forms.MaskedTextBox()
         Me.email = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -112,7 +112,7 @@ Partial Class Add_Volunteer
         Me.Panel2.Controls.Add(Me.Notes)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.CheckedListBox2)
+        Me.Panel2.Controls.Add(Me.SkillsField)
         Me.Panel2.Controls.Add(Me.Label19)
         Me.Panel2.Controls.Add(Me.TextBox7)
         Me.Panel2.Controls.Add(Me.Label18)
@@ -120,20 +120,20 @@ Partial Class Add_Volunteer
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.DateTimePicker3)
         Me.Panel2.Controls.Add(Me.Label16)
-        Me.Panel2.Controls.Add(Me.ComboBox4)
+        Me.Panel2.Controls.Add(Me.VolunteerStatusField)
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.DateTimePicker2)
         Me.Panel2.Controls.Add(Me.Label14)
-        Me.Panel2.Controls.Add(Me.ComboBox3)
+        Me.Panel2.Controls.Add(Me.VeteranStatusField)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.WorkStatusField)
         Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.EducationField)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.DateTimePicker1)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.CheckedListBox1)
+        Me.Panel2.Controls.Add(Me.Media)
         Me.Panel2.Controls.Add(Me.SSN)
         Me.Panel2.Controls.Add(Me.email)
         Me.Panel2.Controls.Add(Me.Label4)
@@ -204,13 +204,13 @@ Partial Class Add_Volunteer
         Me.Button1.Text = "Save"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'CheckedListBox2
+        'SkillsField
         '
-        Me.CheckedListBox2.FormattingEnabled = True
-        Me.CheckedListBox2.Location = New System.Drawing.Point(141, 319)
-        Me.CheckedListBox2.Name = "CheckedListBox2"
-        Me.CheckedListBox2.Size = New System.Drawing.Size(120, 34)
-        Me.CheckedListBox2.TabIndex = 38
+        Me.SkillsField.FormattingEnabled = True
+        Me.SkillsField.Location = New System.Drawing.Point(141, 319)
+        Me.SkillsField.Name = "SkillsField"
+        Me.SkillsField.Size = New System.Drawing.Size(120, 34)
+        Me.SkillsField.TabIndex = 38
         '
         'Label19
         '
@@ -269,13 +269,13 @@ Partial Class Add_Volunteer
         Me.Label16.TabIndex = 31
         Me.Label16.Text = "Hire Date"
         '
-        'ComboBox4
+        'VolunteerStatusField
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(141, 283)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox4.TabIndex = 30
+        Me.VolunteerStatusField.FormattingEnabled = True
+        Me.VolunteerStatusField.Location = New System.Drawing.Point(141, 283)
+        Me.VolunteerStatusField.Name = "VolunteerStatusField"
+        Me.VolunteerStatusField.Size = New System.Drawing.Size(121, 21)
+        Me.VolunteerStatusField.TabIndex = 30
         '
         'Label15
         '
@@ -302,13 +302,13 @@ Partial Class Add_Volunteer
         Me.Label14.TabIndex = 27
         Me.Label14.Text = "Dicharge date"
         '
-        'ComboBox3
+        'VeteranStatusField
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(141, 249)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 26
+        Me.VeteranStatusField.FormattingEnabled = True
+        Me.VeteranStatusField.Location = New System.Drawing.Point(141, 249)
+        Me.VeteranStatusField.Name = "VeteranStatusField"
+        Me.VeteranStatusField.Size = New System.Drawing.Size(121, 21)
+        Me.VeteranStatusField.TabIndex = 26
         '
         'Label13
         '
@@ -336,13 +336,13 @@ Partial Class Add_Volunteer
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "Work Status"
         '
-        'ComboBox1
+        'EducationField
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(141, 210)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 22
+        Me.EducationField.FormattingEnabled = True
+        Me.EducationField.Location = New System.Drawing.Point(141, 210)
+        Me.EducationField.Name = "EducationField"
+        Me.EducationField.Size = New System.Drawing.Size(121, 21)
+        Me.EducationField.TabIndex = 22
         '
         'Label11
         '
@@ -378,13 +378,13 @@ Partial Class Add_Volunteer
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Social Media"
         '
-        'CheckedListBox1
+        'Media
         '
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Location = New System.Drawing.Point(143, 135)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(119, 64)
-        Me.CheckedListBox1.TabIndex = 15
+        Me.Media.FormattingEnabled = True
+        Me.Media.Location = New System.Drawing.Point(143, 135)
+        Me.Media.Name = "Media"
+        Me.Media.Size = New System.Drawing.Size(119, 64)
+        Me.Media.TabIndex = 15
         '
         'SSN
         '
@@ -540,24 +540,24 @@ Partial Class Add_Volunteer
     Friend WithEvents Label4 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents SSN As MaskedTextBox
-    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents Media As CheckedListBox
     Friend WithEvents Label9 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents Label16 As Label
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents VolunteerStatusField As ComboBox
     Friend WithEvents Label15 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents Label14 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents VeteranStatusField As ComboBox
     Friend WithEvents Label13 As Label
     Friend WithEvents WorkStatusField As ComboBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents EducationField As ComboBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents CheckedListBox2 As CheckedListBox
+    Friend WithEvents SkillsField As CheckedListBox
     Friend WithEvents Label19 As Label
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label18 As Label

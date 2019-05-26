@@ -11,8 +11,10 @@ Public Class Add_Volunteer
         user = userId
         WorkStatusField.DataSource = [Enum].GetValues(GetType(WorkStatus))
         WorkStatusField.SelectedItem = WorkStatus.Working
-
-
+        SkillsField.DataSource = [Enum].GetValues(GetType(Skills))
+        VeteranStatusField.DataSource = [Enum].GetValues(GetType(VeteranStatus))
+        VolunteerStatusField.DataSource = [Enum].GetValues(GetType(VolunteerStatus))
+        EducationField.DataSource = [Enum].GetValues(GetType(Education))
     End Sub
 
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk

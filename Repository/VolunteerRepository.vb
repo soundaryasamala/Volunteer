@@ -54,8 +54,8 @@ Public Class VolunteerRepository
 
                 Dim query As String = $"Update Volunteer Set
 	 Title = '{vol.Title }',Name ='{vol.Name }',Address = '{vol.Address }',Work_STATUS_ID = 1,PHONE_HOME ='{vol.HomePhoneNo }',PHONE_MOBILE = '{vol.MobileNo}'
-	,SOCIAL_SECURITY_NUMBER ='{vol.SSN }',DATE_OF_BIRTH = '{vol.Dob }',VOLUNTEER_STATUS = {Convert.ToInt32(vol.VolunteerStatus) },HIRE_DATE ='{vol.HireDate  }',NOTES = '{vol.Notes },Image = @image
-     where ID = {volunteer_Id })"
+	,SOCIAL_SECURITY_NUMBER ='{vol.SSN }',DATE_OF_BIRTH = '{vol.Dob }',VOLUNTEER_STATUS = {Convert.ToInt32(vol.VolunteerStatus) },HIRE_DATE ='{vol.HireDate  }',NOTES = '{vol.Notes }',Image = @image
+     where ID = {volunteer_Id }"
                 dataHelper.ExecuteNonQuery(query, array, True)
             End Using
         End If
@@ -64,7 +64,8 @@ Public Class VolunteerRepository
     Public Function AddVolunteer(ByVal vol As Volunteer, ByVal image As Image)
 
         If image Is Nothing Then
-            Dim query As String = $"INSERT INTO VOLUNTEER 
+            Dim query As String = $"INSERT INTO VOLUNTEER (TITLE,NAME,ADDRESS,WORK_STATUS_ID,PHONE_HOME,PHONE_MOBILE,
+SOCIAL_SECURITY_NUMBER,DATE_OF_BIRTH,VOLUNTEER_STATUS,HIRE_DATE,NOTES,PHYSICAL_DISABILITY)
 	 VALUES ('{vol.Title }','{vol.Name }','{vol.Address }',{1},'{vol.HomePhoneNo }','{vol.MobileNo}'
 	,'{vol.SSN }','{vol.Dob }',{Convert.ToInt32(vol.VolunteerStatus) },'{vol.HireDate  }','','')"
             dataHelper.ExecuteNonQuery(query, Nothing)
@@ -114,7 +115,6 @@ Public Class VolunteerRepository
         Vol.HireDate = row.Item("HIRE_DATE")
         Vol.WorkStatus = row.Item("WORK_STATUS_ID")
         Vol.Notes = row.Item("Notes")
-        Vol.Image = row.Item("Image")
 
         'query = $"SELECT DEGREE_ID,DATE_OF_GRADUATION FROM VOLUNTEER_EDUCATION WHERE VOLUNTEER_ID = {id}"
         'dt = dataHelper.ExecuteQuery(query, Nothing).Tables(0)
