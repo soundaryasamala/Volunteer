@@ -22,10 +22,5 @@ desktop_app_mark_1
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="T:desktop_app_mark_1.TEST_DATA_BASEDataSet">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
 </members>
 </doc>
