@@ -24,6 +24,7 @@ Partial Class Form_EditVolunteer
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.EditPhoto = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.NotesText = New System.Windows.Forms.TextBox()
         Me.Notes = New System.Windows.Forms.Label()
@@ -67,7 +68,7 @@ Partial Class Form_EditVolunteer
         Me.NameField = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.EditPhoto = New System.Windows.Forms.Button()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,6 +77,7 @@ Partial Class Form_EditVolunteer
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel1.Controls.Add(Me.Logout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
@@ -142,6 +144,15 @@ Partial Class Form_EditVolunteer
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(808, 381)
         Me.Panel2.TabIndex = 1
+        '
+        'EditPhoto
+        '
+        Me.EditPhoto.Location = New System.Drawing.Point(647, 100)
+        Me.EditPhoto.Name = "EditPhoto"
+        Me.EditPhoto.Size = New System.Drawing.Size(75, 23)
+        Me.EditPhoto.TabIndex = 45
+        Me.EditPhoto.Text = "Edit Photo"
+        Me.EditPhoto.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -490,14 +501,14 @@ Partial Class Form_EditVolunteer
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'EditPhoto
+        'Logout
         '
-        Me.EditPhoto.Location = New System.Drawing.Point(647, 100)
-        Me.EditPhoto.Name = "EditPhoto"
-        Me.EditPhoto.Size = New System.Drawing.Size(75, 23)
-        Me.EditPhoto.TabIndex = 45
-        Me.EditPhoto.Text = "Edit Photo"
-        Me.EditPhoto.UseVisualStyleBackColor = True
+        Me.Logout.Location = New System.Drawing.Point(763, 3)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(75, 23)
+        Me.Logout.TabIndex = 1
+        Me.Logout.Text = "Log Out"
+        Me.Logout.UseVisualStyleBackColor = True
         '
         'Form_EditVolunteer
         '
@@ -565,4 +576,5 @@ Partial Class Form_EditVolunteer
     Friend WithEvents Notes As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents EditPhoto As Button
+    Friend WithEvents Logout As Button
 End Class

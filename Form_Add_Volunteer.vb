@@ -104,4 +104,12 @@ Public Class Add_Volunteer
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles WorkStatusField.SelectedIndexChanged
 
     End Sub
+
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+
+        Dim obj1 As LoginForm = New LoginForm()
+        obj1.Show()
+        Me.Hide()
+
+    End Sub
 End Class

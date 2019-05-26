@@ -42,6 +42,7 @@ Partial Class EditEvent
         Me.ShiftEnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Expenses = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Reimbursements = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +51,7 @@ Partial Class EditEvent
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Panel1.Controls.Add(Me.Logout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel1.Location = New System.Drawing.Point(-2, -3)
@@ -213,6 +215,16 @@ Partial Class EditEvent
         Me.Reimbursements.HeaderText = "Reimbursements"
         Me.Reimbursements.Name = "Reimbursements"
         '
+        'Logout
+        '
+        Me.Logout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Logout.Location = New System.Drawing.Point(724, 3)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(75, 23)
+        Me.Logout.TabIndex = 1
+        Me.Logout.Text = "Log Out"
+        Me.Logout.UseVisualStyleBackColor = True
+        '
         'EditEvent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -251,4 +263,5 @@ Partial Class EditEvent
     Friend WithEvents ShiftEnd As DataGridViewTextBoxColumn
     Friend WithEvents Expenses As DataGridViewTextBoxColumn
     Friend WithEvents Reimbursements As DataGridViewTextBoxColumn
+    Friend WithEvents Logout As Button
 End Class

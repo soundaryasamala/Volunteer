@@ -133,4 +133,12 @@ Public Class Form_EditVolunteer
 
         End If
     End Sub
+
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+
+        Dim obj1 As LoginForm = New LoginForm()
+        obj1.Show()
+        Me.Hide()
+
+    End Sub
 End Class

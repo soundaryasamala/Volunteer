@@ -30,12 +30,6 @@ Partial Class Form_AddEvent
         Me.Notes = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.EventDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Type = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.EventName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.index = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.volunteer = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.Hours = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,6 +37,13 @@ Partial Class Form_AddEvent
         Me.ShiftEnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Expenses = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Reimbursements = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EventDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Type = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.EventName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +52,7 @@ Partial Class Form_AddEvent
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Panel1.Controls.Add(Me.Logout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel1.Location = New System.Drawing.Point(-2, -3)
@@ -131,6 +133,47 @@ Partial Class Form_AddEvent
         Me.DataGridView1.Size = New System.Drawing.Size(742, 150)
         Me.DataGridView1.TabIndex = 6
         '
+        'index
+        '
+        Me.index.HeaderText = "No."
+        Me.index.Name = "index"
+        '
+        'volunteer
+        '
+        Me.volunteer.DataPropertyName = "Volunteer"
+        Me.volunteer.HeaderText = "Volunteer"
+        Me.volunteer.Name = "volunteer"
+        '
+        'Hours
+        '
+        Me.Hours.DataPropertyName = "Hours"
+        Me.Hours.HeaderText = "Hours"
+        Me.Hours.Name = "Hours"
+        '
+        'ShiftStart
+        '
+        Me.ShiftStart.DataPropertyName = "ShiftStart"
+        Me.ShiftStart.HeaderText = "Shift Start time"
+        Me.ShiftStart.Name = "ShiftStart"
+        '
+        'ShiftEnd
+        '
+        Me.ShiftEnd.DataPropertyName = "ShiftEnd"
+        Me.ShiftEnd.HeaderText = "Shift End Time"
+        Me.ShiftEnd.Name = "ShiftEnd"
+        '
+        'Expenses
+        '
+        Me.Expenses.DataPropertyName = "Expenses"
+        Me.Expenses.HeaderText = "Expenses"
+        Me.Expenses.Name = "Expenses"
+        '
+        'Reimbursements
+        '
+        Me.Reimbursements.DataPropertyName = "Reimbursements"
+        Me.Reimbursements.HeaderText = "Reimbursements"
+        Me.Reimbursements.Name = "Reimbursements"
+        '
         'EventDate
         '
         Me.EventDate.Location = New System.Drawing.Point(137, 102)
@@ -179,46 +222,15 @@ Partial Class Form_AddEvent
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Name  :"
         '
-        'index
+        'Logout
         '
-        Me.index.HeaderText = "No."
-        Me.index.Name = "index"
-        '
-        'volunteer
-        '
-        Me.volunteer.DataPropertyName = "Volunteer"
-        Me.volunteer.HeaderText = "Volunteer"
-        Me.volunteer.Name = "volunteer"
-        '
-        'Hours
-        '
-        Me.Hours.DataPropertyName = "Hours"
-        Me.Hours.HeaderText = "Hours"
-        Me.Hours.Name = "Hours"
-        '
-        'ShiftStart
-        '
-        Me.ShiftStart.DataPropertyName = "ShiftStart"
-        Me.ShiftStart.HeaderText = "Shift Start time"
-        Me.ShiftStart.Name = "ShiftStart"
-        '
-        'ShiftEnd
-        '
-        Me.ShiftEnd.DataPropertyName = "ShiftEnd"
-        Me.ShiftEnd.HeaderText = "Shift End Time"
-        Me.ShiftEnd.Name = "ShiftEnd"
-        '
-        'Expenses
-        '
-        Me.Expenses.DataPropertyName = "Expenses"
-        Me.Expenses.HeaderText = "Expenses"
-        Me.Expenses.Name = "Expenses"
-        '
-        'Reimbursements
-        '
-        Me.Reimbursements.DataPropertyName = "Reimbursements"
-        Me.Reimbursements.HeaderText = "Reimbursements"
-        Me.Reimbursements.Name = "Reimbursements"
+        Me.Logout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Logout.Location = New System.Drawing.Point(718, 14)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(75, 23)
+        Me.Logout.TabIndex = 1
+        Me.Logout.Text = "Log Out"
+        Me.Logout.UseVisualStyleBackColor = True
         '
         'Form_AddEvent
         '
@@ -259,4 +271,5 @@ Partial Class Form_AddEvent
     Friend WithEvents ShiftEnd As DataGridViewTextBoxColumn
     Friend WithEvents Expenses As DataGridViewTextBoxColumn
     Friend WithEvents Reimbursements As DataGridViewTextBoxColumn
+    Friend WithEvents Logout As Button
 End Class

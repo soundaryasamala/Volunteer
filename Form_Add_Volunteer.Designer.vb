@@ -68,6 +68,7 @@ Partial Class Add_Volunteer
         Me.Name_Text = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,6 +77,7 @@ Partial Class Add_Volunteer
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel1.Controls.Add(Me.Logout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
@@ -493,6 +495,15 @@ Partial Class Add_Volunteer
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Logout
+        '
+        Me.Logout.Location = New System.Drawing.Point(752, 3)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(75, 23)
+        Me.Logout.TabIndex = 1
+        Me.Logout.Text = "Log Out"
+        Me.Logout.UseVisualStyleBackColor = True
+        '
         'Add_Volunteer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -558,4 +569,5 @@ Partial Class Add_Volunteer
     Friend WithEvents Notes As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents UploadPhoto As Button
+    Friend WithEvents Logout As Button
 End Class

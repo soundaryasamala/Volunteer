@@ -25,6 +25,10 @@ Partial Class Form_Events
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TYPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Volunteers = New System.Windows.Forms.Button()
         Me.Delete = New System.Windows.Forms.Button()
@@ -32,10 +36,7 @@ Partial Class Form_Events
         Me.AddButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.search = New System.Windows.Forms.TextBox()
-        Me.CheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TYPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -44,6 +45,7 @@ Partial Class Form_Events
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Panel1.Controls.Add(Me.Logout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 1)
         Me.Panel1.Name = "Panel1"
@@ -71,6 +73,38 @@ Partial Class Form_Events
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(959, 446)
         Me.DataGridView1.TabIndex = 1
+        '
+        'CheckBox
+        '
+        Me.CheckBox.HeaderText = ""
+        Me.CheckBox.Name = "CheckBox"
+        Me.CheckBox.Width = 40
+        '
+        'ID
+        '
+        Me.ID.DataPropertyName = "Id"
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Name
+        '
+        Me.Name.DataPropertyName = "Name"
+        Me.Name.HeaderText = "EventName"
+        Me.Name.Name = "Name"
+        Me.Name.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'TYPE
+        '
+        Me.TYPE.DataPropertyName = "TYPE"
+        Me.TYPE.FillWeight = 800.0!
+        Me.TYPE.HeaderText = "Event Description"
+        Me.TYPE.Name = "TYPE"
+        Me.TYPE.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.TYPE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.TYPE.Width = 800
         '
         'Panel2
         '
@@ -143,37 +177,14 @@ Partial Class Form_Events
         Me.search.Size = New System.Drawing.Size(265, 20)
         Me.search.TabIndex = 0
         '
-        'CheckBox
+        'Logout
         '
-        Me.CheckBox.HeaderText = ""
-        Me.CheckBox.Name = "CheckBox"
-        Me.CheckBox.Width = 40
-        '
-        'ID
-        '
-        Me.ID.DataPropertyName = "Id"
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Name
-        '
-        Me.Name.DataPropertyName = "Name"
-        Me.Name.HeaderText = "EventName"
-        Me.Name.Name = "Name"
-        Me.Name.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'TYPE
-        '
-        Me.TYPE.DataPropertyName = "TYPE"
-        Me.TYPE.FillWeight = 800.0!
-        Me.TYPE.HeaderText = "Event Description"
-        Me.TYPE.Name = "TYPE"
-        Me.TYPE.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.TYPE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.TYPE.Width = 800
+        Me.Logout.Location = New System.Drawing.Point(725, 0)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(75, 23)
+        Me.Logout.TabIndex = 1
+        Me.Logout.Text = "Log Out"
+        Me.Logout.UseVisualStyleBackColor = True
         '
         'Form_Events
         '
@@ -183,7 +194,6 @@ Partial Class Form_Events
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel1)
-        'Me.Name = "Form_Events"
         Me.Text = "Events"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -208,4 +218,5 @@ Partial Class Form_Events
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Name As DataGridViewTextBoxColumn
     Friend WithEvents TYPE As DataGridViewTextBoxColumn
+    Friend WithEvents Logout As Button
 End Class
